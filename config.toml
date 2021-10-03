@@ -21,7 +21,7 @@ customJS = ["js/console.js"] # Path relative to assets folder
 # Homepage description
 # For blog page description you can overwrite it 
 # in the front matter
-description = "Boilerplate website"
+description = "nishinohi website"
 email = "tomoya0209@gmail.com"
 favicon = '/favicon.ico'
 # Dark mode support
@@ -51,6 +51,13 @@ blank = true
 icon = "/icons/twitter.svg"
 name = "twitter"
 url = "https://twitter.com/nishinohi"
+
+[[params.social]]
+alt = "Qiita icon"
+blank = true
+icon = "/icons/qiita.svg"
+name = "qiita"
+url = "https://qiita.com/nishinohi"
 
 # Navigation bar
 [menu]

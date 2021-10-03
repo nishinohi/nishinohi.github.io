@@ -67,18 +67,6 @@
                 href="https://nishinohi.github.io/tags/"
                 />
   </url><url>
-    <loc>https://nishinohi.github.io/about/</loc>
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://nishinohi.github.io/en/about/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://nishinohi.github.io/about/"
-                />
-  </url><url>
     <loc>https://nishinohi.github.io/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -89,6 +77,18 @@
                 rel="alternate"
                 hreflang="ja"
                 href="https://nishinohi.github.io/categories/"
+                />
+  </url><url>
+    <loc>https://nishinohi.github.io/about/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://nishinohi.github.io/en/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://nishinohi.github.io/about/"
                 />
   </url>
 </urlset>
