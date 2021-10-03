@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on nishinohi</title>
-    <link>https://nishinohi.github.io/tags/</link>
+    <link>https://nishinohi.github.io/en/tags/</link>
     <description>Recent content in Tags on nishinohi</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ja</language>
-    <lastBuildDate>Thu, 25 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://nishinohi.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en</language>
+    <lastBuildDate>Thu, 25 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://nishinohi.github.io/en/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>recipe</title>
-      <link>https://nishinohi.github.io/tags/recipe/</link>
+      <link>https://nishinohi.github.io/en/tags/recipe/</link>
       <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://nishinohi.github.io/tags/recipe/</guid>
+      <guid>https://nishinohi.github.io/en/tags/recipe/</guid>
       <description></description>
     </item>
     

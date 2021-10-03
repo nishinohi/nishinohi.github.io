@@ -2,93 +2,93 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://nishinohi.github.io/ja/blog/</loc>
+    <loc>https://nishinohi.github.io/blog/</loc>
     <lastmod>2020-06-25T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
+                href="https://nishinohi.github.io/en/blog/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
                 href="https://nishinohi.github.io/blog/"
                 />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://nishinohi.github.io/ja/blog/"
-                />
   </url><url>
-    <loc>https://nishinohi.github.io/ja/blog/krabby_patty/</loc>
+    <loc>https://nishinohi.github.io/blog/krabby_patty/</loc>
     <lastmod>2020-06-25T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
+                href="https://nishinohi.github.io/en/blog/krabby_patty/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
                 href="https://nishinohi.github.io/blog/krabby_patty/"
                 />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://nishinohi.github.io/ja/blog/krabby_patty/"
-                />
   </url><url>
-    <loc>https://nishinohi.github.io/ja/</loc>
+    <loc>https://nishinohi.github.io/</loc>
     <lastmod>2020-06-25T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
+                href="https://nishinohi.github.io/en/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
                 href="https://nishinohi.github.io/"
                 />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://nishinohi.github.io/ja/"
-                />
   </url><url>
-    <loc>https://nishinohi.github.io/ja/tags/recipe/</loc>
+    <loc>https://nishinohi.github.io/tags/recipe/</loc>
     <lastmod>2020-06-25T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
+                href="https://nishinohi.github.io/en/tags/recipe/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
                 href="https://nishinohi.github.io/tags/recipe/"
                 />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://nishinohi.github.io/ja/tags/recipe/"
-                />
   </url><url>
-    <loc>https://nishinohi.github.io/ja/tags/</loc>
+    <loc>https://nishinohi.github.io/tags/</loc>
     <lastmod>2020-06-25T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
+                href="https://nishinohi.github.io/en/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
                 href="https://nishinohi.github.io/tags/"
                 />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://nishinohi.github.io/ja/tags/"
-                />
   </url><url>
-    <loc>https://nishinohi.github.io/ja/about/</loc>
+    <loc>https://nishinohi.github.io/about/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
+                href="https://nishinohi.github.io/en/about/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
                 href="https://nishinohi.github.io/about/"
                 />
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://nishinohi.github.io/ja/about/"
-                />
   </url><url>
-    <loc>https://nishinohi.github.io/ja/categories/</loc>
+    <loc>https://nishinohi.github.io/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://nishinohi.github.io/categories/"
+                href="https://nishinohi.github.io/en/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://nishinohi.github.io/ja/categories/"
+                href="https://nishinohi.github.io/categories/"
                 />
   </url>
 </urlset>
