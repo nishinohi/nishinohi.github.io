@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang='ja' class=''>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name=viewport content="width=device-width, initial-scale=1">
+
+<meta name="description" content="Recipe of the legendary Krabby Patty." />
+
+<title>
+	nishinohi
+	 - MATAGEEK 
+</title>
+
+
+
+<link rel="icon" href="/favicon.ico">
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://nishinohi.github.io/js/pico.min.0c87ee6124671e6a6caffc5953bef38a.js" intergrity="md5-DIfuYSRnHmpsr/xZU77zig==" crossorigin="anonymous"></script>
+
+
+	
+
+
+
+
+
+<link rel="stylesheet" href="https://nishinohi.github.io/css/main.min.173cce1f7229bc17bbb7db5a0e01316b.css" crossorigin="anonymous" media="screen"
+	integrity="md5-FzzOH3IpvBe7t9taDgExaw==">
+
+
+
+
+
+
+<link rel="stylesheet" href="https://nishinohi.github.io/css/syntax.min.a381883ed9f1079c185da5f1200cd5a9.css" crossorigin="anonymous"
+	integrity="md5-o4GIPtnxB5wYXaXxIAzVqQ==" media="screen">
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://nishinohi.github.io/style/style.min.d41d8cd98f00b204e9800998ecf8427e.css" crossorigin="anonymous" media="screen"
+	integrity="md5-1B2M2Y8AsgTpgAmY7PhCfg==">
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://nishinohi.github.io/css/main.min.d5d46344e3b621a3e3a173927106f45d.css" crossorigin="anonymous" media="screen"
+	integrity="md5-1dRjROO2IaPjoXOScQb0XQ==">
+
+
+</head>
+
+<body class="min-h-screen bg-secondary-light dark:bg-secondary text-primary relative pb-24">
+	
+	<div id="top" class="dark"></div>
+
+<header class="w-full flex items-center justify-between px-5 mx-auto md:pt-8 md:max-w-5xl pt-5">
+	
+	<div class="flex items-center">
+		<a href="https://nishinohi.github.io/" class="inline-block font-bold no-underline select-none">
+			<h1 class="hidden md:block font-charter tracking-normal m-0">
+				nishinohi
+			</h1>
+
+			<div class="md:hidden">
+				<div class="w-8 h-8 relative font-bold bg-white blend-diff">
+	<h1 class="absolute-center m-0 font-charter text-2xl text-gray-100 blend-diff select-none">
+		n
+	</h1>
+</div>
+			</div>
+		</a>
+		
+	</div>
+
+	<nav class="">
+		
+		<a href="/"
+			class='mx-1 md:mx-2 hover:text-primary-light dark:hover:text-primary-dark no-underline'>
+			 Home
+		</a>
+		
+		<a href="/blog/"
+			class='mx-1 md:mx-2 hover:text-primary-light dark:hover:text-primary-dark no-underline'>
+			 Blog
+		</a>
+		
+	</nav>
+</header>
+	
+
+	<main class="w-full px-4 pt-8 mx-auto md:max-w-4xl overflow-x-hidden md:overflow-visible ">
+<button onclick="window.history.back()"
+	class="bg-transparent border-none font-bold">&larr;Back</button>
+<h1 class="text-center mx-auto max-w-4xl text-4xl sm:text-5xl md:text-6xl">
+	MATAGEEK
+</h1>
+
+<div class="text-justify leading-loose mb-12 text-lg">
+	<p><img  class="mx-auto my-4"  src="/img/matageek.png" alt=""
+	>
+
+</p>
+<h1 id="matageekって何">MATAGEEKって何？</h1>
+<hr>
+<p>一言でいうとBLEメッシュネットワークを利用した狩猟用わなの検知及び通知システムです。</p>
+<h1 id="わな猟って大変ですよね">わな猟って大変ですよね</h1>
+<hr>
+<p>狩猟といえば猟銃のイメージがありますが、わな猟も重要な方法の一つです。しかし仕掛けたわなは原則毎日見回りを実施する必要があります。<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>（非狩猟鳥獣がかからないように、手負いの動物をつくらないように等）また獲物がかかった場合もできる限り早急に対処できた方が理想的です。
+<img  class="mx-auto my-4"  src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/167138/96263081-cac6-4885-2b5d-d6f0faa54969.png" alt=""
+	>
+
+
+ということでイメージとしては以下のようなものが出来上がれば色々便利そうです。
+<img  class="mx-auto my-4"  src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/167138/8d2f2fb1-1e60-9222-44d6-5aff25b38ba4.png" alt=""
+	>
+
+
+わなが作動したときに通知を送信するようなものであれば
+
+
+
+
+<a href="https://soracom.jp/store/5208/" 
+	class="underline "  target="_blank" rel="noopener"
+	>
+	SORACOM LTE-M Button
+</a>などの市販のIoTモジュールで割と事足ります。ですがわな猟は捕獲率を上げるために動物の通りそうな箇所にわなを複数個仕掛けるのが一般的で、それぞれのわなにIoTモジュールを配置するのは費用的に個人で可能なレベルとは少し言いにくいです。（ピンきりですがLTE回線等が使用できるモジュールは安くても1万円はするので）</p>
+<h1 id="メッシュネットワーク">メッシュネットワーク</h1>
+<hr>
+<p>上記の問題を解決するために、今回はBluetoothを用いたメッシュネットワークを利用します。市販品でも親機（LTE回線が使用できるもの）と子機（親機と短距離通信ができるもの）でネットワークを作るIoTモジュールもありますが、狩猟用に利用できそうなものではスター型のネットワークのものしか調べた限りなさそうでした。（あったら教えてほしいです）
+<img  class="mx-auto my-4"  src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/167138/2f2d1010-2abe-52d4-e1ff-b20e35fe1b86.png" alt=""
+	>
+
+
+ここでBluetoothに詳しい人であれば「あ〜<code>Bluetooth5.0</code>の<code>Bluetooth Mesh</code>ね」と思われたでしょう。しかしBluetoothにもう少し詳しい人であれば表題に違和感を覚えたはずです。<code>Bluetooth 5.0</code>で追加された<code>Bluetooth Mesh</code>は<code>Bluetooth Low Energy（BLE）</code>に基づいてはいますが<strong>低消費電力ソリューションではありません</strong>。
+簡単に説明すると<code>Bluetooth Mesh</code>は接続を維持するために仕様上無線をオフにすることができません。そしてBluetooth機器における電力消費の主たるものは無線です。一部のノード（メッシュ内の一つのBluetoothデバイスのこと）を低消費電力モード（Low Powerモード）で稼働させることは仕様的にも可能ですが、Low Powerモードと通信するノードはLow Powerモードにすることができません。つまり、<strong>全てのノードを低消費電力で稼働させることは仕様上不可能</strong>です。
+となると表題の低消費電力狩猟用モジュールとは一体どういうことなのとなります。実は今回のメッシュネットワークは<strong>Bluetooth 4のBLE機能のみ</strong>でメッシュネットワークを形成することで低消費電力を実現しています。</p>
+<h1 id="fruitymesh">FruityMesh</h1>
+<hr>
+<p><img  class="mx-auto my-4"  src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/167138/19df096e-8859-64b8-defa-828207ac3a32.png" alt=""
+	>
+
+
+
+
+
+
+
+<a href="https://github.com/mwaylabs/fruitymesh" 
+	class="underline "  target="_blank" rel="noopener"
+	>
+	FruityMesh
+</a>という<code>Bluetooth 4</code>の<code>BLE</code>のみでメッシュネットワーク作成しているPJがあります。このPJについて色々説明したいのですがそれだけで記事3つくらいの分量になりそうなので今回は詳細な説明は省きます。このPJでは実際に消費電力を計測したところ電力消費の高いスキャニング（デバイスを探す機能）でも<strong>1mA以下</strong>でした。またメッシュ内のノードがある個数まで達したときスキャニングを停止することが可能であれば、ノードの個数にもよりますがおおよそ<strong>150-250µA</strong>で稼働させることができるようです。今回はこれに色々手を加えつつ、スマホからもノードの情報を取得したり操作できるようにします。偉大なる先人に感謝🙏</p>
+<h1 id="構成">構成</h1>
+<hr>
+<h2 id="狩猟用わなモジュール構成">狩猟用わなモジュール構成</h2>
+<p><img  class="mx-auto my-4"  src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/167138/50e962de-9d79-3075-4b01-ccf83bd2ff61.png" alt=""
+	>
+
+</p>
+<p>メッシュ内に最低でも一つゲートウェイ機能（LTE回線が利用できる）があるノードを含め、任意の数のノードでメッシュネットワークを形成します。ノードを設置するフローは以下のようになります。</p>
+<ul>
+<li>スマートフォンなどからノードに接続しノードを任意のネットワークに登録（エンロール）する</li>
+<li>メッシュネットワーク内のノードを設置モードにしてわなを仕掛けた場所に設置する</li>
+<li>メッシュネットワーク内のノードを探知モードにする</li>
+</ul>
+<h3 id="ノードを任意のネットワークに登録エンロールする">ノードを任意のネットワークに登録（エンロール）する</h3>
+<p>ノードは特定のノードとのみメッシュネットワークを作成する必要があります。（そうでないと赤の他人が近くに設置した場合相互に接続してしまいます）そのためノードには以下の２つの情報を付与することで特定のネットワークに所属させることができます。（これを登録（エンロール）と呼んでいます）これは<code>Bluetooth Mesh</code>での<code>Provisioning</code>に対応していると考えてもらっていいと思います。（参考：
+
+
+
+
+<a href="https://www.bluetooth.com/blog/provisioning-a-bluetooth-mesh-network-part-1/" 
+	class="underline "  target="_blank" rel="noopener"
+	>
+	Provisioning a Bluetooth Mesh Network
+</a>）</p>
+<ul>
+<li>ネットワークID</li>
+<li>ネットワークキー</li>
+</ul>
+<p>ネットワークIDは自身が所属すべきネットワークの識別ID、ネットワークキーは16byteで構成される対象のネットワークに接続するための共通鍵です。これにより例えば自分と他人がネットワークIDを同じ<code>1</code>としてエンロールしてもネットワークキーが異なれば接続されません。この機能はFruityMeshに実装されている標準機能で実現できますが、現状の実装だとノードを個別に有線（UART等）でエンロールする必要があるため以下のような機能を追加して処理が一度で済むようにしています。</p>
+<ul>
+<li>ノードは初期状態ではデフォルトのネットワークIDとネットワークキーで起動し、同じく初期状態のノード同士でメッシュネットワークを作成する</li>
+<li>初期状態のノードにスマートフォンで接続し、ネットワークIDとネットワークキーをメッシュネットワーク内のノードに送信する</li>
+</ul>
+<p>ただしこの機能は初期状態のノードは同じく初期状態のノードと無差別にメッシュネットワークを形成するため、登録作業は自身の所持しているノード以外のノードが存在しない環境で実施する必要があります。</p>
+<h3 id="設置モードと探知モード">設置モードと探知モード</h3>
+<p><img  class="mx-auto my-4"  src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/167138/fffb7bb2-e6a5-edfe-c20d-eb38d22af4a4.png" alt=""
+	>
+
+
+モードの切り替え機能は狩猟用モジュールとして追加した機能の一つです。これらのモードの違いは主にBluetoothのスキャニングの頻度であり、つまるところ消費電力の違いです。設置モードはスキャニングの頻度を高め電力を多めに消費するかわりに他のノードが探しやすくなります。逆に探知モードのノードは現在の接続を維持しつつ他のノードを探さなくなるかわりに消費電力を大幅に抑えることが可能です。
+猟場にわなを設置する場合は設置モードに設定し、わな設置後期待通りのメッシュネットワークが形成されていれば探知モードに切り替えて長時間稼働させるという使用方法を想定しています。</p>
+<h2 id="インフラ構成">インフラ構成</h2>
+<p>メッシュ内の何れかのノードが作動した場合ユーザーに通知を送信します。図ではブラウザで情報を見れるような記述がありますが今回そこは説明しませんというかまだできてません😂</p>
+<p><img  class="mx-auto my-4"  src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/167138/46123292-871e-7002-a38d-8c093b3c0d78.png" alt=""
+	>
+
+</p>
+<p>後述するSORACOM BEAMによる暗号化を利用するための証明書や秘密鍵の発行はAWS IoTを利用しています。これでSIM毎に個別の暗号化ができるのでもしこの仕組みを利用したい方がいればそれぞれでセキュリティを担保できます。</p>
+<h1 id="暗号化">暗号化</h1>
+<hr>
+<p>簡単では無いですが避けては通れないのが暗号化です。今回は2種類の通信でそれぞれに暗号化が必要です。</p>
+<ul>
+<li>わなの作動情報をAWS IoTへ送信する際の暗号化</li>
+<li>メッシュネットワーク内の通信の暗号化</li>
+</ul>
+<p>メッシュネットワーク内の通信はローカルネットワークなので、スニッフィングするにはわなが設置されている場所まで赴く必要があります。ですので正直そこまで気にしなくてもという気もしますがFruityMeshにすでに暗号化の機能が実装されているのでありがたく利用します。</p>
+<h2 id="わなの作動情報の暗号化">わなの作動情報の暗号化</h2>
+<p>主にIoTなどで利用されるMQTTプロトコルでわなの作動状況を送信しますが、そのままでは何も暗号化されていないのでMQTTSを使用したいところです。しかしMQTTSを使用するには一般的なIoTデバイスの乏しいリソース（今回は64Mhz、256KB SRAM程度のものを使用します）では少々辛い部分があります。そこで活躍してくれるのが
+
+
+
+
+<a href="https://soracom.jp/services/beam/" 
+	class="underline "  target="_blank" rel="noopener"
+	>
+	SORACOM BEAM
+</a>です。SORACOM BEAMはIoTデバイスにかかる暗号化等の高負荷処理や接続先の設定をクラウドにオフロードできるサービスです。
+デバイス側は下図のようにキャリアの閉域網からBeamのエンドポイントへ暗号化されていないパケットを送信するだけです。その後Beam側が受信したパケットを指定された暗号化方式で暗号化して指定された送信先へパケットを転送してくれます。
+<img  class="mx-auto my-4"  src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/167138/db602a56-c17b-2387-4ac7-0f00ae952274.png" alt=""
+	>
+
+</p>
+<h2 id="メッシュネットワーク内での通信の暗号化">メッシュネットワーク内での通信の暗号化</h2>
+<p><code>Bluetooth 4</code>では
+
+
+
+
+<a href="https://www.bluetooth.com/blog/bluetooth-pairing-part-1-pairing-feature-exchange/#:~:text=Bonding%20is%20the%20exchange%20of,that%20allows%20bonding%20to%20occur." 
+	class="underline "  target="_blank" rel="noopener"
+	>
+	ペアリングとボンディング
+</a>による暗号化が仕様として策定されていますが、FruityMeshでは独自の暗号化を利用しています。<code>GAP</code>（Bluetoothでの通信の基本的な規約のようなもので暗号化もここで規定されています）の<strong>非暗号化通信にアプリケーション層で独自の暗号化</strong>を実施しています。（この仕様は異なるデバイスでの相互運用を目的としているようです）暗号化の方式は簡単に言うと共通鍵暗号方式です。ノード間でコネクションを確立した際、一定のタイムアウト内で乱数を共通鍵で暗号化したパケットを交換することでお互いを認証しています。</p>
+<h1 id="使用する機材">使用する機材</h1>
+<hr>
+<h2 id="メッシュネットワーク用デバイス">メッシュネットワーク用デバイス</h2>
+<p>ここまできてやっと実際どんな機材を使うのかという話です。今回は比較的長い距離（実測で見通し距離30m程）でも通信できる
+
+
+
+
+<a href="https://www.nordicsemi.com/Products/Low-power-short-range-wireless/nRF52840/GetStarted?lang=ja-JP" 
+	class="underline "  target="_blank" rel="noopener"
+	>
+	Nordic nRF52840
+</a>を使用します。このSoCを使用していて国内で使用できる（技適的な意味で）ものはそんなに多くなく、購入の容易さから大体以下の２つかなと思います。プログラムはJ-LINKで書き込むためSWDのコネクタがついているAdafruitの方が便利かなと思います。SparkFunの方にもついてはいるんですが物理的にちょっと使いにくい作りになっています。</p>
+<ul>
+<li>
+
+
+
+
+<a href="https://www.sparkfun.com/products/15025" 
+	class="underline "  target="_blank" rel="noopener"
+	>
+	SparkFun Pro nRF52840 Mini
+</a></li>
+<li>
+
+
+
+
+<a href="https://www.adafruit.com/product/4062" 
+	class="underline "  target="_blank" rel="noopener"
+	>
+	Adafruit Feather nRF52840 Express
+</a>
+<img  class="mx-auto my-4"  src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/167138/adbbe057-a68f-213d-6836-94bcd5ff0405.png" alt=""
+	>
+
+</li>
+</ul>
+<p>Nordic製品の開発は
+
+
+
+
+<a href="https://www.segger.com/products/development-tools/embedded-studio/" 
+	class="underline "  target="_blank" rel="noopener"
+	>
+	SEGGER Embedded Studio
+</a>を利用することが多いようですが、 VSCodeでも開発可能で私は後者で開発しています。簡単な開発の手引のような記事を書いたことがあるので一応紹介しておきます。</p>
+<ul>
+<li>
+
+
+
+
+
+
+<a href="https://qiita.com/nishinohi/items/545521df7b06e66149c9" 
+	class="underline break-words"  target="_blank" rel="noopener"
+	>
+	VSCode + ARM GNU ToolsでNordicの開発環境を構築する
+</a></li>
+</ul>
+<p>FruityMeshでも環境の構築方法が紹介されているのでFruityMeshを自身でビルドする際は
+
+
+
+
+<a href="https://www.bluerange.io/docs/fruitymesh/Quick-Start.html" 
+	class="underline "  target="_blank" rel="noopener"
+	>
+	ここ
+</a>を参照してください。CMakeを利用しているのでNordicの開発環境の構築方法とは少し異なります。</p>
+<h2 id="ゲートウェイ">ゲートウェイ</h2>
+<p>ゲートウェイに関しては好みのものを使用する感じです。BluetoothデバイスからゲートウェイへUART等でわなの作動状況等を送信し、最終的にクラウドへ送信してもらいます。SORACOM BEAMを使用する場合SORACOM SIMを利用できるものが良いと思います。ちなみにSORACOMでの各種サービスの動作確認済みのデバイスは
+
+
+
+
+<a href="https://soracom.jp/support_partners/certified_device/" 
+	class="underline "  target="_blank" rel="noopener"
+	>
+	ここ
+</a>で公開されています。しかしながら実際ゲートウェイに求めている機能はキャリア網を使用してパケットを送信するだけなので市販のゲートウェイでは機能過多な感じは否めません。以前私は自分でキャリア網を使用するためだけの小さなモジュールを作ってみたので参考までに紹介しておきます。</p>
+<ul>
+<li>
+
+
+
+
+<a href="https://qiita.com/nishinohi/items/752f94ec1fe6b11e6e8d" 
+	class="underline "  target="_blank" rel="noopener"
+	>
+	WiFi・GPS機能付き3Gモジュールを作る
+</a></li>
+</ul>
+<h1 id="メッシュネットワークとスマートフォンの接続">メッシュネットワークとスマートフォンの接続</h1>
+<hr>
+<p>FruityMeshは有線（UART等）でターミナルのようにコマンドを受け付ける機能が備わっており、それを用いて各種設定や登録処理が可能ですがどうせならスマートフォンからそのような操作を実行したいところです。
+<img  class="mx-auto my-4"  src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/167138/2ec10a07-89e3-d2fd-afeb-535368093ad2.png" alt=""
+	>
+
+</p>
+<p>FruityMeshにはスマートフォンとの接続を考慮した機能が実装されています。しかしFruityMeshのメッシュネットワークに接続できるスマートフォンアプリ自体は特に無いので自前で開発しました。現状Androidのみ対応で整理しきれていないのとセキュリティキーの保存の方法が完全にアウトなのでリンクは貼りませんが気になる方は連携しているGithubのアカウントで公開はしているのでどうぞ。</p>
+<p>アプリの操作画面は以下のようになります。</p>
+<h2 id="ノードのスキャニング">ノードのスキャニング</h2>
+<p><img  class="mx-auto my-4"  src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/167138/c4170459-f24e-a306-a29f-21ae613f65b3.png" alt=""
+	>
+
+
+アドバタイズパケット（Bluetoothデバイスを発見してもらうためのパケット）にFruityMeshのService IDが含まれているもののみを表示します。また、
+
+
+
+
+<a href="/###-%e3%83%8e%e3%83%bc%e3%83%89%e3%82%92%e4%bb%bb%e6%84%8f%e3%81%ae%e3%83%8d%e3%83%83%e3%83%88%e3%83%af%e3%83%bc%e3%82%af%e3%81%ab%e7%99%bb%e9%8c%b2%ef%bc%88%e3%82%a8%e3%83%b3%e3%83%ad%e3%83%bc%e3%83%ab%ef%bc%89%e3%81%99%e3%82%8b" 
+	class="underline " >
+	ノードのエンロール
+</a>で説明した初期状態のノードはアイコンが灰色で表示されます。ちなみに<code>MataGeek</code>というのはこのPJの名称です。（マタギ＋ギーク）</p>
+<h2 id="ノードのエンロール">ノードのエンロール</h2>
+<p><img  class="mx-auto my-4"  src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/167138/2dcc4a33-11de-a26c-6556-8f6dd305fe6c.png" alt=""
+	>
+
+
+現状はACTIVATEのボタンを押すと端末（スマートフォン）に保存済みのネットワークIDとネットワークキーを送信します。エンロールされたノードは設定された内容で再起動します。</p>
+<h2 id="モードの変更">モードの変更</h2>
+<p><img  class="mx-auto my-4"  src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/167138/34d0af56-e54d-7d00-20d7-c5430520a21a.png" alt=""
+	>
+
+
+START DETECTを押すとモードを探知モードに変更できます。逆に探知モードの状態だと設置モードに変更できます。ノードの基本的な情報もここで知ることができます。</p>
+<ul>
+<li>ClusterSize
+<ul>
+<li>メッシュネットワーク内のノードの数</li>
+</ul>
+</li>
+<li>Mode
+<ul>
+<li>現在のモード（SETUPは設置モードを表します）</li>
+</ul>
+</li>
+<li>Device Name
+<ul>
+<li>デバイス名（任意に変更可能）</li>
+</ul>
+</li>
+<li>Trap State
+<ul>
+<li>わなの作動状況</li>
+</ul>
+</li>
+<li>Battery
+<ul>
+<li>バッテリー残量</li>
+</ul>
+</li>
+</ul>
+<h1 id="バッテリー問題">バッテリー問題</h1>
+<hr>
+<p>以上の構成でおそらく目的の機能は達成できたかなと考えています。しかしここまで説明しておいてなんですが私は電気回路等は完全に独学でまともな知識が無いので電源をどうすべきか悩んでいます。というのも以下の内容の正しい答えがわかっていません。</p>
+<ul>
+<li>不燃の小型で高用量バッテリーってある？</li>
+<li>低消費電力用の電源回路ってどんなの？</li>
+</ul>
+<p>まずバッテリーはできればリチウムイオンバッテリーを使用したいですが、最悪ノードを山中に紛失する可能性がある以上可燃性のものは避けたいです。
+自分で試す電気回路の電源はいつも三端子レギュレータを使用していました。これが低消費電力プロダクトに向いていないことは知っているのですが、どのようなものが向いているのか正直よくわかっていません。もしどなたかご存知でしたら教えて下さい。</p>
+<section class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1" role="doc-endnote">
+<p>第Ⅱ章 捕獲に関する基礎知識 - 農林水産省&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</section>
+
+</div>
+
+
+<hr class="mb-6 mt-24">
+
+
+<div class="flex flex-wrap justify-between items-center">
+	
+	<div class=" mb-1 text-center sm:text-left overflow-ellipsis pr-1">
+		<a class="mr-4 no-underline" href="https://nishinohi.github.io/blog/compact-3g-module/">
+			<img src="/icons/top_arrow.svg" class="transform -rotate-90 inline-block">
+		</a>
+		<a href="https://nishinohi.github.io/blog/compact-3g-module/">
+			<span class="underline">コンパクトな3G通信モジュールを作る</span>
+		</a>
+	</div>
+	
+
+	
+</div>
+
+<hr class="my-6">
+<div class="flex justify-center items-center flex-wrap">
+	
+	<a href="mailto:tomoya0209@gmail.com" title="email"
+		class="bg-black rounded-full p-3 mx-2 my-2 transform hover:scale-110 active:scale-90 transition-transform duration-300 ease-in-out"
+		 >
+		<img src="/icons/email.svg" alt="email icon" class="w-4 h-4 md:w-6 md:h-6 blend-diff">
+	</a>
+	
+	<a href="https://github.com/nishinohi" title="github"
+		class="bg-black rounded-full p-3 mx-2 my-2 transform hover:scale-110 active:scale-90 transition-transform duration-300 ease-in-out"
+		 target="_blank"   rel="noopener" >
+		<img src="/icons/github.svg" alt="github icon" class="w-4 h-4 md:w-6 md:h-6 blend-diff">
+	</a>
+	
+	<a href="https://twitter.com/nishinohi" title="twitter"
+		class="bg-black rounded-full p-3 mx-2 my-2 transform hover:scale-110 active:scale-90 transition-transform duration-300 ease-in-out"
+		 target="_blank"   rel="noopener" >
+		<img src="/icons/twitter.svg" alt="twitter icon" class="w-4 h-4 md:w-6 md:h-6 blend-diff">
+	</a>
+	
+	<a href="https://qiita.com/nishinohi" title="qiita"
+		class="bg-black rounded-full p-3 mx-2 my-2 transform hover:scale-110 active:scale-90 transition-transform duration-300 ease-in-out"
+		 target="_blank"   rel="noopener" >
+		<img src="/icons/qiita.svg" alt="Qiita icon" class="w-4 h-4 md:w-6 md:h-6 blend-diff">
+	</a>
+	
+</div>
+<div class="mt-6"></div>
+
+
+	</main>
+
+	<div class="absolute bottom-0 w-full"><footer class="w-full h-24 text-center text-xs text-gray-400 bg-black relative">
+	<div class="w-full px-6 md:pt-0 md:mx-auto md:max-w-5xl flex flex-1 space-between items-center absolute-center">
+		<a href="https://nishinohi.github.io/" class="absolute">
+			<div class="w-8 h-8 relative font-bold bg-white blend-diff">
+	<h1 class="absolute-center m-0 font-charter text-2xl text-gray-100 blend-diff select-none">
+		n
+	</h1>
+</div>
+		</a>
+
+		<div class="h-full flex-1">
+			<span class="select-none">
+				<a href="https://github.com/negrel/hugo-theme-pico" class="text-gray-400 hover:text-gray-200 no-underline">Pico</a>
+				theme for
+				<a href="https://gohugo.io/" class="text-gray-400 hover:text-gray-200 no-underline">Hugo</a>
+			</span>
+		</div>
+	</div>
+</footer>
+
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang='ja' class=''>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name=viewport content="width=device-width, initial-scale=1">
+
+<meta name="description" content="Recipe of the legendary Krabby Patty." />
+
+<title>
+	nishinohi
+	 - コンパクトな3G通信モジュールを作る 
+</title>
+
+
+
+<link rel="icon" href="/favicon.ico">
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://nishinohi.github.io/js/pico.min.0c87ee6124671e6a6caffc5953bef38a.js" intergrity="md5-DIfuYSRnHmpsr/xZU77zig==" crossorigin="anonymous"></script>
+
+
+	
+
+
+
+
+
+<link rel="stylesheet" href="https://nishinohi.github.io/css/main.min.173cce1f7229bc17bbb7db5a0e01316b.css" crossorigin="anonymous" media="screen"
+	integrity="md5-FzzOH3IpvBe7t9taDgExaw==">
+
+
+
+
+
+
+<link rel="stylesheet" href="https://nishinohi.github.io/css/syntax.min.a381883ed9f1079c185da5f1200cd5a9.css" crossorigin="anonymous"
+	integrity="md5-o4GIPtnxB5wYXaXxIAzVqQ==" media="screen">
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://nishinohi.github.io/style/style.min.d41d8cd98f00b204e9800998ecf8427e.css" crossorigin="anonymous" media="screen"
+	integrity="md5-1B2M2Y8AsgTpgAmY7PhCfg==">
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://nishinohi.github.io/css/main.min.d5d46344e3b621a3e3a173927106f45d.css" crossorigin="anonymous" media="screen"
+	integrity="md5-1dRjROO2IaPjoXOScQb0XQ==">
+
+
+</head>
+
+<body class="min-h-screen bg-secondary-light dark:bg-secondary text-primary relative pb-24">
+	
+	<div id="top" class="dark"></div>
+
+<header class="w-full flex items-center justify-between px-5 mx-auto md:pt-8 md:max-w-5xl pt-5">
+	
+	<div class="flex items-center">
+		<a href="https://nishinohi.github.io/" class="inline-block font-bold no-underline select-none">
+			<h1 class="hidden md:block font-charter tracking-normal m-0">
+				nishinohi
+			</h1>
+
+			<div class="md:hidden">
+				<div class="w-8 h-8 relative font-bold bg-white blend-diff">
+	<h1 class="absolute-center m-0 font-charter text-2xl text-gray-100 blend-diff select-none">
+		n
+	</h1>
+</div>
+			</div>
+		</a>
+		
+	</div>
+
+	<nav class="">
+		
+		<a href="/"
+			class='mx-1 md:mx-2 hover:text-primary-light dark:hover:text-primary-dark no-underline'>
+			 Home
+		</a>
+		
+		<a href="/blog/"
+			class='mx-1 md:mx-2 hover:text-primary-light dark:hover:text-primary-dark no-underline'>
+			 Blog
+		</a>
+		
+	</nav>
+</header>
+	
+
+	<main class="w-full px-4 pt-8 mx-auto md:max-w-4xl overflow-x-hidden md:overflow-visible ">
+<button onclick="window.history.back()"
+	class="bg-transparent border-none font-bold">&larr;Back</button>
+<h1 class="text-center mx-auto max-w-4xl text-4xl sm:text-5xl md:text-6xl">
+	コンパクトな3G通信モジュールを作る
+</h1>
+
+<div class="text-justify leading-loose mb-12 text-lg">
+	<h1 id="何を作ったのか">何を作ったのか</h1>
+<hr>
+<p>GPS機能付きの3G通信モジュールです。HWの設計に関する知識を持ち合わせていないので0からHWを設計したわけではなく、OSHで提供されている多機能な3Gモジュールを改修してコンパクトなモジュールを再設計・製造したという話です。</p>
+<h1 id="なぜ作ったのか">なぜ作ったのか</h1>
+<hr>
+<p>これを作った当時（2016年くらい）、携帯電波網を利用できる比較的安いArduino向けのモジュールがありませんでした。当時はマイコンによる3G通信で安価なホビー向けの環境は<code>Raspberry Pi ZERO + 3Gドングル + SORACOM SIM</code>の選択肢が一般的でした。そんな中「USBドングルでかい、Raspberry Pi ZERO意外とでかい、電源リソース苦しい、Arduino使いたい」という私の我儘を叶えられるモジュールはないかと奔走しましたが、そんな願ったり叶ったりなモノは見つからなかったため自作することにしました。</p>
+<h1 id="oshオープンソースハードウェア">OSH（オープンソースハードウェア）</h1>
+<h2 id="adafruitとの出会い">Adafruitとの出会い</h2>
+<p>安い3Gモジュールが無いかとネットの海を彷徨っていると、OSH（OpenSourceHardware）で有名なAdafruit Industriesの
+
+
+
+
+<a href="https://learn.adafruit.com/adafruit-fona-3g-cellular-gps-breakout/" 
+	class="underline "  target="_blank" rel="noopener"
+	>
+	Adafruit FONA 3G Cellular
+</a>（以下Fona）という比較的安価（$79.95）なモジュールに出会いました。Arduinoで利用するためのライブラリも提供されています。いたれりつくせりです。しかし技適という壁が立ちはだかり、購入しても日本では使えません。
+<img  class="mx-auto my-4"  src="https://cdn-shop.adafruit.com/640x480/2687-01.jpg" alt=""
+	>
+
+</p>
+<h2 id="モジュール部分を技適対応すればよいのでは">モジュール部分を技適対応すればよいのでは？</h2>
+<p>Fonaには3G通信用のモジュールに<code>SIM5320</code>が使用されていますが、特定のアンテナとセットで技適が取得されている<code>SIM5320J</code>という日本向けのモジュールがありました。モジュールをこれに置き換えて自分で作成してしまえば日本で使用することが可能です。そしてAdafruitの製品は全てOSH。全ての回路図が
+
+
+
+
+<a href="https://www.autodesk.co.jp/products/eagle/overview" 
+	class="underline "  target="_blank" rel="noopener"
+	>
+	Eagle
+</a>のデータ形式で公開されています。</p>
+<h2 id="改修内容">改修内容</h2>
+<p>AdafruitのモジュールはSIM5320の様々な機能を利用するために多くの部品が実装されていますが、通信するだけであれば部品点数を減らせそうだったため以下のような回路に修正することにしました。</p>
+<ul>
+<li>電話機能用のスピーカー回路削除</li>
+<li>イヤホンジャック削除</li>
+<li>バッテリーは電池駆動を想定したのでリチウム電池用の充放電管理回路を削除</li>
+</ul>
+<h1 id="回路図に立ち向かう">回路図に立ち向かう</h1>
+<h2 id="自分の電気回路の知識レベル">自分の電気回路の知識レベル</h2>
+<p>電子工作の知識は全てインターネットとYouTuberから得ましたがそれでも何とかなったので、以降の話も特に電気回路の知識がなくても理解できると思います。</p>
+<h2 id="osh">OSH</h2>
+<p>Adafruitに感謝しながら以下のリポジトリをクローンしましょう。ちなみに
+
+
+
+
+<a href="https://github.com/adafruit/Fritzing-Library" 
+	class="underline "  target="_blank" rel="noopener"
+	>
+	fritzing用のライブラリ
+</a>も公開しているようです（fritzing形式のFONAの回路図はありません）。</p>
+<ul>
+<li>
+
+
+
+
+<a href="https://github.com/adafruit/Adafruit-FONA-SIMCOM-3G-Breakout-PCB" 
+	class="underline "  target="_blank" rel="noopener"
+	>
+	FONA回路図（Eagle）
+</a></li>
+<li>
+
+
+
+
+<a href="https://github.com/adafruit/Adafruit_FONA" 
+	class="underline "  target="_blank" rel="noopener"
+	>
+	FONAライブラリ
+</a></li>
+</ul>
+<h2 id="回路図をみる">回路図をみる</h2>
+<p>
+
+
+
+
+<a href="https://www.autodesk.co.jp/products/eagle/free-download" 
+	class="underline "  target="_blank" rel="noopener"
+	>
+	Eagle
+</a>をインストールしていない場合、まずインストールしましょう。思った以上に複雑でないことが分かると思います。それぞれの機能毎に回路図を分けて記述してあるので読みやすいですね。配線図は一見複雑なように見えますが、実際の配線は回路図からある程度Eagleの機能で自動生成できます。</p>
+<p><img  class="mx-auto my-4"  src="https://cdn-learn.adafruit.com/assets/assets/000/027/324/original/adafruit_products_schem.png" alt=""
+	>
+
+
+<img  class="mx-auto my-4"  src="https://cdn-learn.adafruit.com/assets/assets/000/027/325/medium800/adafruit_products_fabprint.png" alt=""
+	>
+
+</p>
+<h2 id="不要な回路を削る">不要な回路を削る</h2>
+<p>前編で触れましたが、3G通信以外の機能が不要であれば以下の回路は不要なので今回は削除します。</p>
+<ul>
+<li>電話機能用のスピーカー</li>
+<li>イヤホンジャック</li>
+<li>バッテリーは電池駆動を想定したのでリチウム電池用の充放電管理回路</li>
+</ul>
+<p>また、<code>FONA</code>自体は<code>Arduino</code>での利用を想定しているため<code>SIM5320</code>からの3.3V信号をレベルシフター（回路図の「LEVEL SHIFTING」の箇所の三角形の部品）で5V信号に変換しています。しかし、私は<code>ESP8266</code>での利用を想定しており、3.3V信号がそのまま利用できるのでレベルシフターも不要です。よって、回路図の以下のものは不要になります。</p>
+<ul>
+<li>3.5MM HEADPHONE/MIC</li>
+<li>LEVEL SHIFTING</li>
+<li>LIPO CHARGER</li>
+<li>AUDIO FILTERING</li>
+</ul>
+<p>それらを削除した後の回路図、配線図は以下のようになります。グッとシンプルかつ簡単になりましたね。アンテナのコネクタを小さくしたかったので、3G通信アンテナ用のコネクタをSMAからUFLに変更しましたがこれはどっちでもいいです（変換コネクタもあるので）。</p>
+<p><img  class="mx-auto my-4"  src="https://qiita-image-store.s3.amazonaws.com/0/167138/2665f1e4-c606-0bfc-8fd9-628e0ebe85bf.png" alt=""
+	>
+
+
+<img  class="mx-auto my-4"  src="https://qiita-image-store.s3.amazonaws.com/0/167138/14906106-a395-36c1-ab82-4246a866a06d.png" alt=""
+	>
+
+</p>
+<p>改修後の回路図の詳細は下記のリンクを参照して下さい。</p>
+<ul>
+<li>
+
+
+
+
+<a href="https://github.com/nishinohi/Adafruit-FONA-SIMCOM-3G-Breakout-PCB" 
+	class="underline "  target="_blank" rel="noopener"
+	>
+	Adafruit-FONA-SIMCOM-3G-Breakout-PCB
+</a></li>
+</ul>
+<h2 id="発注する">発注する</h2>
+<p>基盤の設計が完了したら後は発注するだけです。発注先は
+
+
+
+
+<a href="https://www.seeedstudio.com/" 
+	class="underline "  target="_blank" rel="noopener"
+	>
+	Seeed
+</a>です。
+
+
+
+
+<a href="https://www.seeedstudio.com/fusion_pcb.html" 
+	class="underline "  target="_blank" rel="noopener"
+	>
+	Fusion PCB
+</a>というサービスは、基盤の製造だけでなく部品の実装までそこそこな価格で対応してもらえます。
+今回の基盤は表面実装1台、基盤のみ5枚で<code>$100</code>ほどでした。FONAより<code>$20</code>程高くなっていますが単品の発注でここまで低価格に抑えられたのはすごいです。</p>
+<p>発注までの細かい流れは以下の記事が大変参考になりました。また、Seeedの
+
+
+
+
+<a href="https://twitter.com/SeeedFusion?lang=ja" 
+	class="underline "  target="_blank" rel="noopener"
+	>
+	twitter
+</a>は日本語対応OKで気さくに質問に答えてもらえます。</p>
+<ul>
+<li>
+
+
+
+
+
+
+<a href="https://qiita.com/mayfair/items/0206bd437c4302be5500#fnref1" 
+	class="underline break-words"  target="_blank" rel="noopener"
+	>
+	Fusion PCBAでハードウェアを「コンパイル」する
+</a></li>
+</ul>
+<h2 id="実物を待つ">実物を待つ</h2>
+<p>どうもSIM5320Jの入手性が良くなかったらしく、納品まで1ヶ月ほどかかりました。実物を手にしたときは中々に感動しました。謎の配線が飛び出していますが、設計ミスでレギュレーターの配線がおかしくなっていた箇所を無理やり修理した痕跡です。</p>
+<p><img  class="mx-auto my-4"  src="https://qiita-image-store.s3.amazonaws.com/0/167138/8ee1a381-8110-9020-147b-83811be9ffe6.jpeg" alt=""
+	>
+
+</p>
+<h1 id="使ってみる">使ってみる</h1>
+<h2 id="ライブラリの修正">ライブラリの修正</h2>
+<p>Adafruitから提供されているライブラリは<code>SIM5320</code>の新しいファームウェアに対応しておらずSIM5320のATコマンドに関するドキュメントとにらめっこしながら修正しました。ちなみにAdafruitのHPにライブラリは現在大きい改修を実施していると記載されていますが、9ヶ月程放置されています。。。</p>
+<h2 id="完成した姿">完成した姿</h2>
+<p>実際に動かせる状態になったモジュールがこちらになります。
+こんな見てくれですが、しっかりSIMを認識して、AWS IoTにMQTTで色々Publishすることができました。</p>
+<p><img  class="mx-auto my-4"  src="https://qiita-image-store.s3.amazonaws.com/0/167138/058dd852-7efb-5e7f-cd9c-ad9973689649.jpeg" alt=""
+	>
+
+</p>
+<h1 id="次のステップ">次のステップ</h1>
+<p>今回はあくまでモジュールとして作成しましたが、マイコンを組み込んでシンプルなGatewayとして再設計してみたいと思います。</p>
+
+</div>
+
+
+<hr class="mb-6 mt-24">
+
+
+<div class="flex flex-wrap justify-between items-center">
+	
+	<div class=" w-full sm:w-1/2  mb-1 text-center sm:text-left overflow-ellipsis pr-1">
+		<a class="mr-4 no-underline" href="https://nishinohi.github.io/blog/compact-gateway/">
+			<img src="/icons/top_arrow.svg" class="transform -rotate-90 inline-block">
+		</a>
+		<a href="https://nishinohi.github.io/blog/compact-gateway/">
+			<span class="underline">コンパクトなGatewayを作る</span>
+		</a>
+	</div>
+	
+
+	
+	<div
+		class=" w-full sm:w-1/2  mt-1 text-center sm:text-right overflow-ellipsis pl-1">
+		<a href="https://nishinohi.github.io/blog/matageek/">
+			<span class="underline">MATAGEEK</span>
+		</a>
+		<a class="ml-4 no-underline" href="https://nishinohi.github.io/blog/matageek/">
+			<img src="/icons/top_arrow.svg" class="transform rotate-90 inline-block">
+		</a>
+	</div>
+	
+</div>
+
+<hr class="my-6">
+<div class="flex justify-center items-center flex-wrap">
+	
+	<a href="mailto:tomoya0209@gmail.com" title="email"
+		class="bg-black rounded-full p-3 mx-2 my-2 transform hover:scale-110 active:scale-90 transition-transform duration-300 ease-in-out"
+		 >
+		<img src="/icons/email.svg" alt="email icon" class="w-4 h-4 md:w-6 md:h-6 blend-diff">
+	</a>
+	
+	<a href="https://github.com/nishinohi" title="github"
+		class="bg-black rounded-full p-3 mx-2 my-2 transform hover:scale-110 active:scale-90 transition-transform duration-300 ease-in-out"
+		 target="_blank"   rel="noopener" >
+		<img src="/icons/github.svg" alt="github icon" class="w-4 h-4 md:w-6 md:h-6 blend-diff">
+	</a>
+	
+	<a href="https://twitter.com/nishinohi" title="twitter"
+		class="bg-black rounded-full p-3 mx-2 my-2 transform hover:scale-110 active:scale-90 transition-transform duration-300 ease-in-out"
+		 target="_blank"   rel="noopener" >
+		<img src="/icons/twitter.svg" alt="twitter icon" class="w-4 h-4 md:w-6 md:h-6 blend-diff">
+	</a>
+	
+	<a href="https://qiita.com/nishinohi" title="qiita"
+		class="bg-black rounded-full p-3 mx-2 my-2 transform hover:scale-110 active:scale-90 transition-transform duration-300 ease-in-out"
+		 target="_blank"   rel="noopener" >
+		<img src="/icons/qiita.svg" alt="Qiita icon" class="w-4 h-4 md:w-6 md:h-6 blend-diff">
+	</a>
+	
+</div>
+<div class="mt-6"></div>
+
+
+	</main>
+
+	<div class="absolute bottom-0 w-full"><footer class="w-full h-24 text-center text-xs text-gray-400 bg-black relative">
+	<div class="w-full px-6 md:pt-0 md:mx-auto md:max-w-5xl flex flex-1 space-between items-center absolute-center">
+		<a href="https://nishinohi.github.io/" class="absolute">
+			<div class="w-8 h-8 relative font-bold bg-white blend-diff">
+	<h1 class="absolute-center m-0 font-charter text-2xl text-gray-100 blend-diff select-none">
+		n
+	</h1>
+</div>
+		</a>
+
+		<div class="h-full flex-1">
+			<span class="select-none">
+				<a href="https://github.com/negrel/hugo-theme-pico" class="text-gray-400 hover:text-gray-200 no-underline">Pico</a>
+				theme for
+				<a href="https://gohugo.io/" class="text-gray-400 hover:text-gray-200 no-underline">Hugo</a>
+			</span>
+		</div>
+	</div>
+</footer>
+
+	</div>
+</body>
+
+</html>
