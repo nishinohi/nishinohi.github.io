@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>architecture on nishinohi</title>
+    <link>https://nishinohi.github.io/tags/architecture/</link>
+    <description>Recent content in architecture on nishinohi</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 25 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://nishinohi.github.io/tags/architecture/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>小さくくらし大きく開く</title>
+      <link>https://nishinohi.github.io/blog/live-small-open-wide/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nishinohi.github.io/blog/live-small-open-wide/</guid>
+      <description>Concept 開口部を居住者や内部空間の都合ではなく都市の風景を眺める歩行者のために設計する。居住者は連続的に変形するルーバーの形に合わせて都市の風景の一部として居住空間を演出する。
+南堀江というコンパクトシティにおいて歴史的経緯のあるビルディングのファサードを失わずに歩行者のためのファサードを形成するとき、新たな都市の風景が生まれるかもしれない。
+このルーバーは見る角度によって内部の見え方にグラデーションをかける装置になる。ルーバーは見る角度によって開口部となりなったり重なりあって壁面のようにも振舞う。
+ルーバーの長さの変化により、周囲に見せたい空間(Public)、見られたくない空間(Private)の調整が可能なり、周囲を歩く人に対しグラデーションのある風景を作り出す。</description>
+    </item>
+    
+  </channel>
+</rss>

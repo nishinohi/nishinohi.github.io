@@ -5,11 +5,11 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name=viewport content="width=device-width, initial-scale=1">
 
-<meta name="description" content="Recipe of the legendary Krabby Patty." />
+<meta name="description" content="Apartment" />
 
 <title>
 	nishinohi
-	 - コンパクトなGatewayを作る 
+	 - 小さくくらし大きく開く 
 </title>
 
 
@@ -130,72 +130,99 @@
 <button onclick="window.history.back()"
 	class="bg-transparent border-none font-bold">&larr;Back</button>
 <h1 class="text-center mx-auto max-w-4xl text-4xl sm:text-5xl md:text-6xl">
-	コンパクトなGatewayを作る
+	小さくくらし大きく開く
 </h1>
 
 <div class="text-justify leading-loose mb-12 text-lg">
-	<h1 id="何を作ったのか">何を作ったのか</h1>
-<hr>
-<p>以前に作成した3G通信モジュールを参考に、マイコンとLTEモジュールを組合わせたコンパクトなGatewayを作成しました。</p>
-<h1 id="osh">OSH</h1>
-<hr>
-<h2 id="参考にする製品">参考にする製品</h2>
-<p>まずはOSHから回路図をもらってきます。今回は<code>SORACOM</code>認定デバイスでもあり<code>Seeed</code>から提供されている
-
-
-
-
-<a href="https://wiki.seeedstudio.com/Wio_LTE_Cat.1/#resource" 
-	class="underline "  target="_blank" rel="noopener"
-	>
-	Wio LTEの回路図
-</a>を参考にします。Wio LTEで実装されているLTE用の<code>EC21</code>の仕様書の参考回路図などから自分で回路を組んでもいいのですが、最終的にPCBAをSeeedに発注する場合Seeedが提供している部品リストを利用したほうが安価で納品も速いです。なお、後述しますが最終的に今回は技適対応済みの<code>EC25-J</code>を実装することになりました。</p>
-<p><img  class="mx-auto my-4"  src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/167138/be013c2a-44ea-5685-80b6-ce512f362d3e.png" alt=""
+	<p><img  class="mx-auto my-4"  src="/img/syuujuu/asset-0.png" alt=""
 	>
 
 </p>
-<h2 id="回路図を見る">回路図を見る</h2>
-<p>前回と同様に通信以外の不要な回路を削除します。<code>Wio LTE</code>には<code>STM32F4</code>というマイコンが搭載されていますが、今回はWiFi機能もつけたかったためマイコン部分を
-
-
-
-
-<a href="https://www.espressif.com/en/products/socs/esp32" 
-	class="underline "  target="_blank" rel="noopener"
+<h1 id="concept">Concept</h1>
+<p>開口部を居住者や内部空間の都合ではなく都市の風景を眺める歩行者のために設計する。居住者は連続的に変形するルーバーの形に合わせて都市の風景の一部として居住空間を演出する。<br>
+南堀江というコンパクトシティにおいて歴史的経緯のあるビルディングのファサードを失わずに歩行者のためのファサードを形成するとき、新たな都市の風景が生まれるかもしれない。</p>
+<p><img  class="mx-auto my-4"  src="/img/syuujuu/asset-1.jpg" alt=""
 	>
-	ESP32
-</a>に置き換えます。また、Wio LTEは3層実装でしたが部品点数を減らせば2層に収まりそうだったので2層で実装にします。</p>
-<p><img  class="mx-auto my-4"  src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/167138/f465b3cb-c4f8-cee5-9b40-156178dd0e87.png" alt=""
+
+
+<img  class="mx-auto my-4"  src="/img/syuujuu/asset-2.jpg" alt=""
+	>
+
+
+<img  class="mx-auto my-4"  src="/img/syuujuu/asset-10.jpg" alt=""
+	>
+
+
+このルーバーは見る角度によって内部の見え方にグラデーションをかける装置になる。ルーバーは見る角度によって開口部となりなったり重なりあって壁面のようにも振舞う。<br>
+ルーバーの長さの変化により、周囲に見せたい空間(Public)、見られたくない空間(Private)の調整が可能なり、周囲を歩く人に対しグラデーションのある風景を作り出す。</p>
+<p><img  class="mx-auto my-4"  src="/img/syuujuu/asset-8.jpg" alt=""
+	>
+
+
+<img  class="mx-auto my-4"  src="/img/syuujuu/asset-9.jpg" alt=""
+	>
+
+
+<img  class="mx-auto my-4"  src="/img/syuujuu/asset-3.jpg" alt=""
+	>
+
+
+<img  class="mx-auto my-4"  src="/img/syuujuu/asset-4.jpg" alt=""
+	>
+
+
+<img  class="mx-auto my-4"  src="/img/syuujuu/asset-5.jpg" alt=""
+	>
+
+
+<img  class="mx-auto my-4"  src="/img/syuujuu/asset-6.jpg" alt=""
+	>
+
+
+<img  class="mx-auto my-4"  src="/img/syuujuu/asset-7.jpg" alt=""
+	>
+
+
+<img  class="mx-auto my-4"  src="/img/syuujuu/asset-11.jpg" alt=""
+	>
+
+
+<img  class="mx-auto my-4"  src="/img/syuujuu/asset-12.jpg" alt=""
+	>
+
+
+<img  class="mx-auto my-4"  src="/img/syuujuu/asset-13.jpg" alt=""
+	>
+
+
+<img  class="mx-auto my-4"  src="/img/syuujuu/asset-14.jpg" alt=""
+	>
+
+
+<img  class="mx-auto my-4"  src="/img/syuujuu/asset-15.jpg" alt=""
+	>
+
+
+<img  class="mx-auto my-4"  src="/img/syuujuu/asset-16.jpg" alt=""
+	>
+
+
+<img  class="mx-auto my-4"  src="/img/syuujuu/asset-17.jpg" alt=""
+	>
+
+
+<img  class="mx-auto my-4"  src="/img/syuujuu/asset-18.jpg" alt=""
+	>
+
+
+<img  class="mx-auto my-4"  src="/img/syuujuu/asset-19.jpg" alt=""
+	>
+
+
+<img  class="mx-auto my-4"  src="/img/syuujuu/asset-20.jpg" alt=""
 	>
 
 </p>
-<h1 id="改修作業">改修作業</h1>
-<hr>
-<h2 id="改修内容">改修内容</h2>
-<p>以下が今回の改修を行った回路図と配線図です。通信機能のみが必要なので上図の回路図よりかなり部品点数が減りました。マイコンもESP32に交換済みです。WiFi用のアンテナが干渉されないように基盤の外にでるように配置しましたが、電波関係の知識は全く無いのでどのような配置がアンテナにとってよい配置なのかはわかっていません。</p>
-<p><img  class="mx-auto my-4"  src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/167138/6c3f39db-0c74-3454-c8de-9f69e457b944.png" alt=""
-	>
-
-</p>
-<p><img  class="mx-auto my-4"  src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/167138/39b15ca3-394e-8e31-a0e0-4e27ce5c8f31.png" alt=""
-	>
-
-</p>
-<h2 id="完成品">完成品</h2>
-<p>とりあえず届いた完成品を見てみます。いかにも無理やりつけた配線が飛び出していますが、これは私がLTEモジュールの起動用のPINを少しいじる必要があったので付け足しました。</p>
-<p><img  class="mx-auto my-4"  src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/167138/bb3ded8d-9348-0f1b-ef78-6bdc3db6c787.png" alt=""
-	>
-
-</p>
-<h2 id="トラブル">トラブル</h2>
-<p>どうもSeeedが提供していたSIMカードホルダーのEagle用のライブラリに不備があったようでそのまま配線するとSIMを正しく読み取れませんでした。なので一度SIMカードホルダーを半田を溶かして無理やり引き剥がし配線をやり直しました。見た目が残念なことになりましたがこれで正しく動作したので一安心です。ちなみにSeeed側からは謝罪を兼ねてSeeed内で使用できるクーポン券が送られてきました。</p>
-<p><img  class="mx-auto my-4"  src="https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/167138/0b931b39-7010-718a-dd5f-1441b42e4556.png" alt=""
-	>
-
-</p>
-<h1 id="ec25-jは特別な入手経路">EC25-Jは特別な入手経路</h1>
-<hr>
-<p>実は今回LTE用のモジュールとして実装している<code>EC25-J</code>ですが、本来技適マークが印字されているものは<strong>個人では注文できません</strong>。Seeed主催の勉強会で登壇した際に知り合ったSeeedのエンジニア兼マーケティング担当の方に相談したところ、<code>EC25-J</code>なら実装できるように手配すると言われ今回このモジュールが完成しました。本当にありがとうございました、この場を借りてお礼申し上げます。</p>
 
 </div>
 
@@ -206,11 +233,11 @@
 <div class="flex flex-wrap justify-between items-center">
 	
 	<div class=" w-full sm:w-1/2  mb-1 text-center sm:text-left overflow-ellipsis pr-1">
-		<a class="mr-4 no-underline" href="https://nishinohi.github.io/blog/live-small-open-wide/">
+		<a class="mr-4 no-underline" href="https://nishinohi.github.io/blog/compact-3g-module/">
 			<img src="/icons/top_arrow.svg" class="transform -rotate-90 inline-block">
 		</a>
-		<a href="https://nishinohi.github.io/blog/live-small-open-wide/">
-			<span class="underline">小さくくらし大きく開く</span>
+		<a href="https://nishinohi.github.io/blog/compact-3g-module/">
+			<span class="underline">コンパクトな3G通信モジュールを作る</span>
 		</a>
 	</div>
 	
@@ -218,10 +245,10 @@
 	
 	<div
 		class=" w-full sm:w-1/2  mt-1 text-center sm:text-right overflow-ellipsis pl-1">
-		<a href="https://nishinohi.github.io/blog/matageek/">
-			<span class="underline">MATAGEEK</span>
+		<a href="https://nishinohi.github.io/blog/compact-gateway/">
+			<span class="underline">コンパクトなGatewayを作る</span>
 		</a>
-		<a class="ml-4 no-underline" href="https://nishinohi.github.io/blog/matageek/">
+		<a class="ml-4 no-underline" href="https://nishinohi.github.io/blog/compact-gateway/">
 			<img src="/icons/top_arrow.svg" class="transform rotate-90 inline-block">
 		</a>
 	</div>
