@@ -63,7 +63,7 @@ body {
   color: #24292e;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial,
     sans-serif, Apple Color Emoji, Segoe UI Emoji;
-  font-size: 16px;
+  font-size: 12px;
   line-height: 1.5;
   word-wrap: break-word;
 }
@@ -91,7 +91,7 @@ body strong {
 }
 
 body h1 {
-  font-size: 2em;
+  font-size: 1.6em;
   margin: 0.67em 0;
 }
 
@@ -103,7 +103,7 @@ body code,
 body kbd,
 body pre {
   font-family: monospace, monospace;
-  font-size: 1em;
+  font-size: 0.7em;
 }
 
 body hr {
@@ -206,7 +206,7 @@ body h6 {
 }
 
 body h1 {
-  font-size: 32px;
+  font-size: 18px;
 }
 
 body h1,
@@ -215,11 +215,11 @@ body h2 {
 }
 
 body h2 {
-  font-size: 24px;
+  font-size: 14px;
 }
 
 body h3 {
-  font-size: 20px;
+  font-size: 12px;
 }
 
 body h3,
@@ -228,11 +228,11 @@ body h4 {
 }
 
 body h4 {
-  font-size: 16px;
+  font-size: 10px;
 }
 
 body h5 {
-  font-size: 14px;
+  font-size: 8px;
 }
 
 body h5,
@@ -241,7 +241,7 @@ body h6 {
 }
 
 body h6 {
-  font-size: 12px;
+  font-size: 7px;
 }
 
 body p {
@@ -279,7 +279,7 @@ body dd {
 body code,
 body pre {
   font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, monospace;
-  font-size: 12px;
+  font-size: 10px;
 }
 
 body pre {
@@ -381,7 +381,7 @@ body .pl-6 {
 }
 
 body .f6 {
-  font-size: 12px !important;
+  font-size: 10px !important;
 }
 
 body .lh-condensed {
@@ -677,7 +677,7 @@ body h6 {
 }
 
 body h1 {
-  font-size: 2em;
+  font-size: 1.6em;
 }
 
 body h1,
@@ -687,23 +687,23 @@ body h2 {
 }
 
 body h2 {
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 body h3 {
-  font-size: 1.25em;
-}
-
-body h4 {
   font-size: 1em;
 }
 
+body h4 {
+  font-size: 0.8em;
+}
+
 body h5 {
-  font-size: 0.875em;
+  font-size: 0.65em;
 }
 
 body h6 {
-  font-size: 0.85em;
+  font-size: 0.6em;
   color: #6a737d;
 }
 
@@ -739,7 +739,7 @@ body dl {
 body dl dt {
   padding: 0;
   margin-top: 16px;
-  font-size: 1em;
+  font-size: 0.8em;
   font-style: italic;
   font-weight: 600;
 }
