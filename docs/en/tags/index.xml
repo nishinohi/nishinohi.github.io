@@ -6,13 +6,31 @@
     <description>Recent content in Tags on nishinohi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Thu, 25 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://nishinohi.github.io/en/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nishinohi.github.io/en/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>recipe</title>
-      <link>https://nishinohi.github.io/en/tags/recipe/</link>
+      <title>matageek</title>
+      <link>https://nishinohi.github.io/en/tags/matageek/</link>
+      <pubDate>Fri, 25 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://nishinohi.github.io/en/tags/matageek/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>architecture</title>
+      <link>https://nishinohi.github.io/en/tags/architecture/</link>
       <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
       
-      <guid>https://nishinohi.github.io/en/tags/recipe/</guid>
+      <guid>https://nishinohi.github.io/en/tags/architecture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hw</title>
+      <link>https://nishinohi.github.io/en/tags/hw/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nishinohi.github.io/en/tags/hw/</guid>
       <description></description>
     </item>
     

@@ -15,7 +15,7 @@ banner = 'img/house/asset-1.jpg'
 
 # Concept
 
-便利さや機能性といった生活を豊かに送るためではなく、陶芸家として生きるための住戸の提案。
+便利さや機能性のための住居ではなく、陶芸家として生きるための住居の提案。
 
 ![](img/house/asset-1.jpg)
 ![](img/house/asset-2.jpg)

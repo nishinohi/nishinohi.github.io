@@ -15,9 +15,10 @@ hero_media = "/img/sotusei.png"
 	# The url of the button
   url = "/about"
 	# The text of the button
-  label = "Know more"
+  label = "about me"
 	# Primary color
 	primary = true
 +++
 
 # nishinohi on the net
+

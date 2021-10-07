@@ -26,8 +26,3 @@ banner = 'img/kaitaiyugou/asset-0.png'
 ![](img/kaitaiyugou/asset-5.jpg)
 ![](img/kaitaiyugou/asset-6.jpg)
 ![](img/kaitaiyugou/asset-7.jpg)
-![](img/kaitaiyugou/asset-8.jpg)
-![](img/kaitaiyugou/asset-9.jpg)
-![](img/kaitaiyugou/asset-10.jpg)
-![](img/kaitaiyugou/asset-11.jpg)
-![](img/kaitaiyugou/asset-12.jpg)

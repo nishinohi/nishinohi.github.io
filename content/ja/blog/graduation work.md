@@ -7,7 +7,7 @@ date = 2020-06-25
 description = "graduation work guraduation"
 
 # Comment next line and the default banner wil be used.
-banner = 'img/guraduation/asset-5.jpg'
+banner = 'img/guraduation/asset-4.jpg'
 
 +++
 
@@ -22,4 +22,3 @@ banner = 'img/guraduation/asset-5.jpg'
 ![](img/guraduation/asset-8.jpg)
 ![](img/guraduation/asset-9.jpg)
 ![](img/guraduation/asset-10.jpg)
-![](img/guraduation/asset-11.jpg)
