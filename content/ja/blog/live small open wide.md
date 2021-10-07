@@ -1,5 +1,5 @@
 +++
-title = "小さくくらし大きく開く"
+title = "小さく暮らし大きく開く"
 tags = ['architecture']
 date = 2020-06-25
 

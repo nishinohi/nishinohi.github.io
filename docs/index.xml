@@ -28,6 +28,27 @@ FruityMesh  FruityMesh というBluetooth 4のBLEのみでメッシュネット�
     </item>
     
     <item>
+      <title>Nakanoshima Islandization</title>
+      <link>https://nishinohi.github.io/blog/nakanoshima-islandization/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nishinohi.github.io/blog/nakanoshima-islandization/</guid>
+      <description>Concept 大阪の中にありながら周囲を水で囲まれた中之島は水都大阪の要であり、水運を利用した様々な交易の中心であり文化の発祥地でもあった。だが、大規模な橋や幹線道路の整備、地下鉄の普及により中之島はその島としてのコンテクストを失いただの地続きの土地のように認識されている。
+この美術館は中之島を文化の発祥地として再度「島化」する計画である。周囲を水で囲まれたその土地にはかつて水運を担った船が発着を繰り返し、訪れる人々に島という特別な場としての中之島を再認識させるだろう。</description>
+    </item>
+    
+    <item>
+      <title>カイタイユウゴウ</title>
+      <link>https://nishinohi.github.io/blog/kaitaiyugou/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nishinohi.github.io/blog/kaitaiyugou/</guid>
+      <description>Concept 家族が多ければ多いほど必要な部屋数は増し様々な空間の大きさもより増大する。しかしながら、家族構成の変化に伴い家に求められる大きさはいずれ縮小する。
+そのとき家は変化にどう対応できるだろうか。使われなくなった子供部屋、夫婦2人には少し大きいリビング、余った寝室。それらを外部に開放して家の内部面積を縮小し外部空間を拡大する。
+このとき家々はその素材や構造を複雑に絡ませながらゆるやかに広がり周囲と交わり複雑な境界を作っていくだろう。</description>
+    </item>
+    
+    <item>
       <title>コンパクトなGatewayを作る</title>
       <link>https://nishinohi.github.io/blog/compact-gateway/</link>
       <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
@@ -54,7 +75,16 @@ EC25-Jは特別な入手経路  実は今回LTE用のモジュールとして実
     </item>
     
     <item>
-      <title>小さくくらし大きく開く</title>
+      <title>卒業設計</title>
+      <link>https://nishinohi.github.io/blog/graduation-work/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nishinohi.github.io/blog/graduation-work/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>小さく暮らし大きく開く</title>
       <link>https://nishinohi.github.io/blog/live-small-open-wide/</link>
       <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
       
@@ -63,6 +93,15 @@ EC25-Jは特別な入手経路  実は今回LTE用のモジュールとして実
 南堀江というコンパクトシティにおいて歴史的経緯のあるビルディングのファサードを失わずに歩行者のためのファサードを形成するとき、新たな都市の風景が生まれるかもしれない。
 このルーバーは見る角度によって内部の見え方にグラデーションをかける装置になる。ルーバーは見る角度によって開口部となりなったり重なりあって壁面のようにも振舞う。
 ルーバーの長さの変化により、周囲に見せたい空間(Public)、見られたくない空間(Private)の調整が可能なり、周囲を歩く人に対しグラデーションのある風景を作り出す。</description>
+    </item>
+    
+    <item>
+      <title>陶芸家のための住宅</title>
+      <link>https://nishinohi.github.io/blog/house-for-potter/</link>
+      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nishinohi.github.io/blog/house-for-potter/</guid>
+      <description>Concept 便利さや機能性といった生活を豊かに送るためではなく、陶芸家として生きるための住戸の提案。</description>
     </item>
     
     <item>
