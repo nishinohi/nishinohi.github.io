@@ -1,245 +1,243 @@
 +++
-title = "職務経歴書"
+title = "Resume"
 +++
 ---
 
-# 職務経歴概要
+# Overview
 ---
-### Webシステム
+### Web system
 
-* 設計・要件定義：2年
-* プログラミング（フロントエンド）：3年
-* プログラミング（バックエンド）：1年
-* プロジェクトリーダー：1年
+* Design and requirements definition：2 year
+* Programming (front-end)：3 year
+* Programming (back-end)：1 year
+* Project Leader：1 year
 
-### 距離画像カメラを使った3Dセンシングシステム
+### Other development experience
 
-* テスター：6ヶ月
-* プログラミング：1年
+* Creating ArchiCAD GDL objects：3 month
 
-### その他開発経験
-
-* ArchiCAD GDLオブジェクトの作成：3ヶ月
-
-# プログラミングスキル
+# Programming skills
 ---
 ### C, C++
 
-* 後述の3Dセンシングの開発で1年、業務外での個人開発（マイコン関連）で1年ほど
-* 一般的な業務の読み書きができ、クラスベースの実装や複雑でないテンプレートなども実装できる
+* One year for the development of 3D sensing described below, and about one year for personal development outside of work (related to microcomputers)
+* Able to read and write common business tasks, implement class-based implementations, and less complex templates
 
 ### Java
 
-* Web開発のバックエンドでJava8を1年ほど
-* 一般的な業務の読み書きは問題なくでき、ジェネリクスや複雑でないリフレクションなども実装できる
+* About a year of Java 8 in the backend of web development
+* I can read and write general business without problems, and can implement generics and less complex reflections
 
 ### JavaScript, TypeScript
 
-* Web開発のフロントエンドでJavaScriptは1年、TypeScriptは3年ほど
-* JavaScriptは一般的な業務の読み書きが可能でモジュールシステム（ES Modules）を理解している
-* TypeScriptは一般的な業務の読み書きに加えジェネリクスやある程度複雑な型定義も可能
-* Three.jsを利用した業務用3Dプログラミングを3年経験
+* About 1 year of JavaScript and 3 years of TypeScript in the front end of web development
+* JavaScript can be used to read and write common tasks and understand the basics of the module system (ES Modules)
+* TypeScript is capable of reading and writing common tasks as well as generics and some complex type definitions.
+* Three years of experience in professional 3D programming using Three.js
 
-# その他のスキル
+# Other Skills
 ---
 ### Adobe Illustrator
 
-* 応用的な操作が可能で広告、提案書等に用いるものを作成可能
+* Able to apply operations to create advertisements, proposals, etc.
 
 ### Adobe Photoshop
 
-* 基本的な操作が可能で簡単な広告、提案書等に用いるものを作成可能
+* Able to perform basic operations and create simple advertisements, proposals, etc.
 
 ### Sketch UP
 
-* 応用的な操作が可能でプラグインの導入などにも知識があり活用できる
+* Able to perform applied operations, and knowledgeable about and able to utilize plug-ins.
 
 ### Blender
 
-* 基本的な操作が可能で複雑でないモデリング、簡単なUV展開、テクスチャ作成が可能
+* Basic and uncomplicated modeling, simple UV development, and texture creation.
 
-# 資格
+# Qualifications
 ---
 </br>
 
-* 普通自動車第一種運転免許：2009/5
-* 応用情報技術者試験合格：2016/12
+* 1st grade Driver's License：5/2009
+* Applied Information Technology Engineer Examination(state examination)：12/2016
 
-# 職務経歴
+# Resume
 ---
-## [応用技術株式会社](https://www.apptec.co.jp/)（2016/5〜2021/9）
+## [APPLIED TECHNOLOGY CO.,LTD.](https://www.apptec.co.jp/)（5/2016〜9/2021）
 
-### ArchiCADのGDLオブジェクトの作成（2016/6〜2016/7）
+### Creating GDL objects in ArchiCAD（5/2016〜7/2016）
 
-* メンバー：1人
-* GDLで一定の入力に対してパラメトリックに変形、制御可能なオブジェクト（トイレ、ガレージ用門扉）を作成
-* MEP Modeler用の接続ポイントを埋め込んだ3Dモデルの作成
+* Members：1
+* Create parametrically deformable and controllable objects (toilets, garage gates) for constant input in GDL.
+* Create a 3D model with embedded connection points for MEP Modeler.
 <div style="margin-top: 1.5rem" />
 
-### 保守業務管理支援システム（2016/8〜2017/1）
+### Maintenance Operations Management Support System（8/2016〜1/2017）
 
-* メンバー：6人
-自社製品である保守業務管理支援システムの特定企業向けカスタマイズのフロントエンド、バックエンドの開発を担当しました。
+* Members：6
+I was in charge of front-end and back-end development for customization of our own product, a maintenance operations management support system, for specific companies.
 <div style="margin-top: 0.8rem" />
 
-* 検索画面のUI作成、検索機能、検索結果等のcsv変換機能
+* UI creation for search screen, search function, csv conversion function for search results, etc.
 * Java EE / Java8 / jQuery / PostgreSQL
 <div style="margin-top: 1.5rem" />
 
-### 3Dウッドデッキ総合積算システム（2017/2〜2018/2）
+### 3D Wood Deck Total Costing System（2/2017〜2/2018）
 
-3Dでのウッドデッキの設計、図面生成、積算システムのフロントエンド開発を担当しました。また、要件定義と設計の一部を担当しました。
+I was in charge of designing a wooden deck in 3D, generating drawings, and developing the front-end of the estimating system. I was responsible for defining the requirements and part of the design.
 <div style="margin-top: 0.8rem" />
 
-* メンバー：5人
-* ウッドデッキ上に配置するフェンスの配置操作、3Dモデル生成機能
-* 要件定義（一部）
-* 画面設計（一部）、機能設計（一部）
+* Members：5
+* Manipulation of fence placement on wood deck, 3D model generation function
+* Requirement definition (partial)
+* Screen design (partial), functional design (partial)
 * Java8 / Three.js / TypeScript
 <div style="margin-top: 1.5rem" />
 
-### [Autodesk University 2017](https://area.autodesk.com/events/au-2017/)へ参加（2017/11）
+### Join [Autodesk University 2017](https://area.autodesk.com/events/au-2017/)（11/2017）
 
-ラスベガスで開催された`Autodesk University`へ参加。
+Attended `Autodesk University` held in Las Vegas.
 <div style="margin-top: 1.5rem" />
 
-### 玄関ドア見積システム（2018/3〜2018/5）
+### Front Door Estimation System（3/2018〜5/2018）
 
-玄関ドアの見積システムの要件定義と画面設計を担当しました。
+I was in charge of defining the requirements and designing the screens for the front door quotation system.
 <div style="margin-top: 0.8rem" />
 
-* メンバー：1人
-* 要件定義
-* 画面設計, インフラ設計（一部）
+* Members：1
+* Requirement definition
+* Screen design, infrastructure design (partial)
 <div style="margin-top: 1.5rem" />
 
-### 自社IoTサービスの企画（2018/6〜2018/8）
+### Planning of our own IoT services（6/2018〜8/2018）
 
-自社でIoTサービスを開発するための企画とデモ用のハードウェアの調査を担当しました。
+I was in charge of planning for the development of our own IoT service and researching hardware for demonstration purposes.
 <div style="margin-top: 0.8rem" />
 
-* メンバー：2人
-* 無線モジュール（920Mhz、Bluetooth等）の調査、開発
-* 企画資料作成
-* SORACOMサービスの調査、利用
+* Members：2
+* Research and development of wireless modules (920Mhz, Bluetooth, etc.)
+* Preparation of planning materials
+* Research and use of SORACOM services
 * C / C++
 <div style="margin-top: 1.5rem" />
 
-### 3Dエクステリア総合積算システム（2018/9〜2019/6）
+### 3D Exterior Total Costing System（9/2018〜6/2019）
 
-`主任`へ昇格（2019/4〜）。  
-3Dでのエクステリアの設計、図面作成、積算システムの`プロジェクトリーダー`を担当しました。
+Promoted to `Chief Engineer` (from 4/2019).  
+Was in charge of designing exteriors in 3D, drawing and `Project Leader` of the costing system.
 <div style="margin-top: 0.8rem" />
 
-* メンバー：5〜6人
-* 顧客対応
-* 要件定義
-* 基本設計、詳細設計、画面設計
-* 要員計画、予算管理
-* 積算システムの共通部分の開発、開発環境の改善（後述）
+* Members：5〜6
+* Customer Service
+* Requirement definition
+* Basic design, detailed design, screen design
+* Staffing plan and budget management
+* Development of common parts of the calculation system and improvement of the development environment (see below)
 * Three.js / TypeScript / Java8
 
-本システムは前述のウッドデッキ総合積算システムへの追加商材としての業務でしたが、前システムの開発環境が貧弱だったため開発環境を刷新しました。
+This system was an additional commercial product to the [3D Wood Deck Total Costing System](en/resume/#3d-wood-deck-total-costing-system2201722018) mentioned above, but the development environment of the previous system was poor, so we revamped the development environment.
 <div style="margin-top: 0.8rem" />
 
-* ソース管理：SVN -> Git, GitLab
-* タスク管理：なし -> redmine、GitLab Issues
-* ドキュメント管理：VSS -> Google Team Drives
-* コミュニケーションツール：メーリングリスト -> Rocket.Chat
-* linterを用いたコードの保守性の向上
+* Version control system：SVN -> Git, GitLab
+* Task Management：nothing -> redmine、GitLab Issues
+* Document Management：VSS -> Google Team Drives, GitLab Wiki
+* Communication tool：Mailing list -> Rocket.Chat
+* Improving code maintainability with linter
 <div style="margin-top: 1.5rem" />
 
-### 所属部署の開発環境改善（2019/7〜2019/8）
+### Improving the development environment in my department（7/2019〜8/2019）
 
-* メンバー：1人
-* 全チームで共通で利用する開発環境の提案
-* AWSへのGitLab、Rocket.Chat、redmineの構築
-* SVN管理のプロジェクトを順次Git管理へ移行
+* Members：1
+* Propose a development environment to be used by all teams
+* Building GitLab, Rocket.Chat, and redmine on AWS
+* Migration of SVN-managed projects to Git management
 <div style="margin-top: 1.5rem" />
 
-### 自社3Dフォーマットの改善案の検討と移行用ツールの開発（2019/9〜2019/12）
+### Consideration of improvement plans for our 3D format and development of tools for migration（9/2019〜12/2019）
 
-メタ情報を含む3Dモデルを表現するための自社フォーマットがあったが、穴開きのモデルを表現できないなど様々な問題点があった。
-そのため問題点を解決した新規フォーマットの検討と旧形式のデータの移行用ツールの開発を担当しました。
+
+There was an in-house format for expressing 3D models containing meta-information, but it had various problems such as not being able to express models with holes.  
+Therefore, I was in charge of examining a new format that solved the problems and developing a tool for transferring data from the old format.
+Consideration of improvement plans for our 3D format and development of tools for migration
+
 <div style="margin-top: 0.8rem" />
 
-* メンバー：1人
-* glTFの調査
-* 移行用ツールの開発
+* Members：1
+* Investigating glTFs
+* Development of migration tools
 * Three.js / TypeScript
 <div style="margin-top: 1.5rem" />
 
-### 育児休業に伴う引き継ぎ作業（2020/1）
+### Handover work due to childcare leave（1/2020）
 
-長期での育児休業を取得予定だったため綿密な引き継ぎ作業をおこないました。
+As I was planning to take a long-term childcare leave, I took over the work.
 <div style="margin-top: 1.5rem" />
 
-### 育児休業（2020/2〜2021/4）
+### Childcare leave（2/2020〜4/2021）
 
-育児と勉強を頑張りました。業務外活動に関しては[こちら](/about#業務外活動)を参照。
+I worked hard on childcare and study. For more information on activities outside of work, see [here](/en/about/#activities-outside-of-work).
 <div style="margin-top: 1.5rem" />
 
-### 3Dエクステリア総合積算システム（2021/5〜2021/10）
+### 3D Exterior Total Costing System（5/2021〜10/2021）
 
-参加タイミングがPJの終盤だったので主にバックアップを担当しました。全ての作業をテレワークで実施。
+The timing of my participation was at the end of the PJ, so I was mainly in charge of backup. All the work was done via telework.
 <div style="margin-top: 0.8rem" />
 
-* メンバー：8人
-* UI.Visionを用いたテストの半自動化
-* 開発支援
+* Members：8
+* Semi-automated testing using UI.
+* Development support
 
 </br>
 
 ---
 <div style="margin-top: 1.5rem" />
 
-## [日本コントロールシステム](https://www.nippon-control-system.co.jp/)（2014/4〜2016/2）
+## [NIPPON CONTROL SYSTEM Corporation.](https://www.nippon-control-system.co.jp/)（4/2014〜2/2016）
 
-### 研修（2014/4〜2014/7）
+### Training/2014〜7/2014）
 
-* Linuxの基本操作
-* Socket通信を利用したSNS作成
-* デジタル回路を用いたハードウェアの開発（マイコン不使用）
+* Basic Linux operations
+* Creating a social network using Socket communication
+* Hardware development using digital circuits (no microcontrollers)
 
 <div style="margin-top: 1.5rem" />
 
-### 介護用3Dセンシング見守りシステム（2014/8〜2014/12）
+### 3D Sensing Monitoring System for Nursing Care（8/2014〜12/2014）
 
-距離画像を用いた被介護者の体制の解析による危険予知システムの検査を担当しました。
+I was in charge of testing a hazard prediction system that uses distance images to analyze the caregiver's system.
 <div style="margin-top: 0.8rem" />
 
-* メンバー：9人
-* 結合検査
+* Members：9
+* Intergration testing
 <div style="margin-top: 1.5rem" />
 
-### 頭部3Dスキャン装置（2015/1〜2015/9）
+### Head 3D scanning device（1/2015〜9/2015）
 
-複数の距離画像カメラから人物の頭部の3Dモデルを高速に作成するシステムの補助ツールの開発を担当しました。
+I was in charge of developing an auxiliary tool for a system that can rapidly create a 3D model of a person's head from multiple distance image cameras.
 <div style="margin-top: 0.8rem" />
 
-* メンバー：4人
-* 複数台カメラのキャリブレーション機能, 色調補正機能
-* システムの筐体設計
+* Members：4
+* Calibration of multiple cameras, Color correction
+* System enclosure design
 * C++
 <div style="margin-top: 1.5rem" />
 
-### ダンスカラオケシステム（2015/10〜2016/12）
+### Dance Karaoke System（10/2015〜12/2016）
 
-カラオケ業界向けのダンス・エンタメシステムの高速化と営業を担当しました。
+I was in charge of speeding up and marketing a dance and entertainment system for the karaoke industry.
 <div style="margin-top: 0.8rem" />
 
-* メンバー：4人
-* 営業活動
-* システムの高速化
+* Members：4
+* Sales activities
+* Speeding up the system
 * C++
 
-### 脇見運転防止システム（2016/1〜2016/2）
+### Anti　distracted driving system（1/2016〜2/2016）
 
-距離画像カメラを用いた脇見運転の防止システムの開発で使用するライブラリ等の調査を担当しました。
+I was in charge of researching libraries, etc. to be used in the development of a system for preventing distracted driving using a distance image camera.
 <div style="margin-top: 0.8rem" />
 
-* メンバー：1人
-* ライブラリ調査, デモプログラム開発
+* Members：1
+* Library research, demo program development
 * C++
 
 </br>
