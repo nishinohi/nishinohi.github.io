@@ -1,58 +1,58 @@
 +++
-title = "コンパクトなGatewayを作る"
+title = "Creating a Compact Gateway"
 tags = ['matageek', 'hw']
 date = 2020-06-25
 
 # For description meta tag
-description = "Recipe of the legendary Krabby Patty."
+description = "Creating a Compact Gateway"
 
 # Comment next line and the default banner wil be used.
 banner = 'https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/167138/0b931b39-7010-718a-dd5f-1441b42e4556.png'
 
 +++
 
-# 何を作ったのか
+# What I made
 ---
-以前に作成した3G通信モジュールを参考に、マイコンとLTEモジュールを組合わせたコンパクトなGatewayを作成しました。
+Using the [3G module created previously](/en/blog/compact-3g-module/) as a reference, I have created a compact Gateway that combines a microcontroller and an LTE module.
 
 # OSH
 ---
 
-## 参考にする製品
+## Products for reference
 
-まずはOSHから回路図をもらってきます。今回は`SORACOM`認定デバイスでもあり`Seeed`から提供されている[Wio LTEの回路図](https://wiki.seeedstudio.com/Wio_LTE_Cat.1/#resource)を参考にします。Wio LTEで実装されているLTE用の`EC21`の仕様書の参考回路図などから自分で回路を組んでもいいのですが、最終的にPCBAをSeeedに発注する場合Seeedが提供している部品リストを利用したほうが安価で納品も速いです。なお、後述しますが最終的に今回は技適対応済みの`EC25-J`を実装することになりました。
+First, get a schematic from OSH. In this case, I will refer to the [circuit diagram of Wio LTE](https://wiki.seeedstudio.com/Wio_LTE_Cat.1/#resource), which is also a `SORACOM` certified device and provided by `Seeed`. However, if you order PCBA from Seeed, it is cheaper and faster to use the parts list provided by Seeed. However, if you order PCBA from Seeed, it is better to use the parts list provided by Seeed.
 
 ![](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/167138/be013c2a-44ea-5685-80b6-ce512f362d3e.png)
 
-## 回路図を見る
+## Read the schematic
 
-前回と同様に通信以外の不要な回路を削除します。`Wio LTE`には`STM32F4`というマイコンが搭載されていますが、今回はWiFi機能もつけたかったためマイコン部分を[ESP32](https://www.espressif.com/en/products/socs/esp32)に置き換えます。また、Wio LTEは3層実装でしたが部品点数を減らせば2層に収まりそうだったので2層で実装にします。
+As before, remove unnecessary circuits except for communication. The `Wio LTE` has a microcontroller called `STM32F4`, but this time I wanted to add WiFi function, so I replaced the microcontroller with [ESP32](https://www.espressif.com/en/products/socs/esp32).Also, the Wio LTE had a three-layer implementation, but I thought I could fit it in two layers by reducing the number of parts, so I decided to implement it in two layers.
 
 ![](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/167138/f465b3cb-c4f8-cee5-9b40-156178dd0e87.png)
 
-# 改修作業
+# Remodeling operations
 ---
-## 改修内容
+## Remodeling content
 
-以下が今回の改修を行った回路図と配線図です。通信機能のみが必要なので上図の回路図よりかなり部品点数が減りました。マイコンもESP32に交換済みです。WiFi用のアンテナが干渉されないように基盤の外にでるように配置しましたが、電波関係の知識は全く無いのでどのような配置がアンテナにとってよい配置なのかはわかっていません。
+The following is the circuit diagram and wiring diagram for this modification. Since only the communication function is needed, the number of parts has been reduced considerably from the above schematic. I have already replaced the microcontroller with an ESP32, and I have placed the WiFi antenna so that it is outside the board to avoid interference, but I don't know what kind of placement is best for the antenna since I have no knowledge of radio waves.
 
 ![](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/167138/6c3f39db-0c74-3454-c8de-9f69e457b944.png)
 
 ![](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/167138/39b15ca3-394e-8e31-a0e0-4e27ce5c8f31.png)
 
-## 完成品
+## Finished product
 
-とりあえず届いた完成品を見てみます。いかにも無理やりつけた配線が飛び出していますが、これは私がLTEモジュールの起動用のPINを少しいじる必要があったので付け足しました。
+Let's take a look at the finished product.There are some wires sticking out that I was forced to add. This was added because I needed to tweak the PIN to activate the LTE module a bit.
 
 ![](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/167138/bb3ded8d-9348-0f1b-ef78-6bdc3db6c787.png)
 
-## トラブル
+## Trouble
 
-どうもSeeedが提供していたSIMカードホルダーのEagle用のライブラリに不備があったようでそのまま配線するとSIMを正しく読み取れませんでした。なので一度SIMカードホルダーを半田を溶かして無理やり引き剥がし配線をやり直しました。見た目が残念なことになりましたがこれで正しく動作したので一安心です。ちなみにSeeed側からは謝罪を兼ねてSeeed内で使用できるクーポン券が送られてきました。
+The SIM card holder provided by Seeed for Eagle had a flaw in the library, and if I wired it as is, it would not read the SIM correctly. So I had to melt the solder and forcibly pull off the SIM card holder and rewire it. It didn't look good, but I was relieved to see that it worked correctly. By the way, Seeed sent me a coupon to use in Seeed with their apology.
 
 ![](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/167138/0b931b39-7010-718a-dd5f-1441b42e4556.png)
 
-# EC25-Jは特別な入手経路
+# EC25-J is a special acquisition channel
 ---
 
-実は今回LTE用のモジュールとして実装している`EC25-J`ですが、本来技適マークが印字されているものは**個人では注文できません**。Seeed主催の勉強会で登壇した際に知り合ったSeeedのエンジニア兼マーケティング担当の方に相談したところ、`EC25-J`なら実装できるように手配すると言われ今回このモジュールが完成しました。本当にありがとうございました、この場を借りてお礼申し上げます。
+In fact, the `EC25-J`, which is implemented as a module for LTE this time, was originally printed with a technical compliance mark, which **cannot be ordered by individuals**. I talked to an engineer and marketing manager of Seeed whom I met when I was speaking at a Seeed-sponsored workshop, and he said he would arrange for `EC25-J` to be implemented, and this module was completed. I would like to take this opportunity to thank him very much.

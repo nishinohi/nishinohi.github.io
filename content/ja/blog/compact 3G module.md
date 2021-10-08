@@ -7,7 +7,7 @@ date = 2018-05-16
 description = "Recipe of the legendary Krabby Patty."
 
 # Comment next line and the default banner wil be used.
-banner = 'https://cdn-learn.adafruit.com/assets/assets/000/027/325/medium800/adafruit_products_fabprint.png'
+banner = 'https://qiita-image-store.s3.amazonaws.com/0/167138/14906106-a395-36c1-ab82-4246a866a06d.png'
 
 +++
 

@@ -80,6 +80,19 @@
                 href="https://nishinohi.github.io/en/tags/architecture/"
                 />
   </url><url>
+    <loc>https://nishinohi.github.io/en/blog/compact-gateway/</loc>
+    <lastmod>2020-06-25T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://nishinohi.github.io/blog/compact-gateway/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://nishinohi.github.io/en/blog/compact-gateway/"
+                />
+  </url><url>
     <loc>https://nishinohi.github.io/en/blog/kaitaiyugou/</loc>
     <lastmod>2020-06-25T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -169,19 +182,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://nishinohi.github.io/en/blog/sin-taro-pan/"
-                />
-  </url><url>
-    <loc>https://nishinohi.github.io/en/blog/compact-gateway/</loc>
-    <lastmod>2020-06-25T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://nishinohi.github.io/blog/compact-gateway/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://nishinohi.github.io/en/blog/compact-gateway/"
                 />
   </url><url>
     <loc>https://nishinohi.github.io/en/blog/compact-3g-module/</loc>

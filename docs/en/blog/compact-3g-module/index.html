@@ -5,11 +5,11 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name=viewport content="width=device-width, initial-scale=1">
 
-<meta name="description" content="Recipe of the legendary Krabby Patty." />
+<meta name="description" content="Creating a compact 3G module" />
 
 <title>
 	nishinohi
-	 - コンパクトな3G通信モジュールを作る 
+	 - Creating a compact 3G module 
 </title>
 
 
@@ -140,19 +140,19 @@
 <button onclick="window.history.back()"
 	class="bg-transparent border-none font-bold">&larr;Back</button>
 <h1 class="text-center mx-auto max-w-4xl text-4xl sm:text-5xl md:text-6xl">
-	コンパクトな3G通信モジュールを作る
+	Creating a compact 3G module
 </h1>
 
 <div class="text-justify leading-loose mb-12 text-lg">
-	<h1 id="何を作ったのか">何を作ったのか</h1>
+	<h1 id="what-i-made">What I made</h1>
 <hr>
-<p>GPS機能付きの3G通信モジュールです。HWの設計に関する知識を持ち合わせていないので0からHWを設計したわけではなく、OSHで提供されている多機能な3Gモジュールを改修してコンパクトなモジュールを再設計・製造したという話です。</p>
-<h1 id="なぜ作ったのか">なぜ作ったのか</h1>
+<p>This is a 3G communication module with GPS function, and since I don&rsquo;t have any knowledge about HW design, I didn&rsquo;t design HW from scratch, but rather redesigned and manufactured a compact module by modifying a multifunctional 3G module provided by OSH.</p>
+<h1 id="why-i-made-it">Why I made it</h1>
 <hr>
-<p>これを作った当時（2016年くらい）、携帯電波網を利用できる比較的安いArduino向けのモジュールがありませんでした。当時はマイコンによる3G通信で安価なホビー向けの環境は<code>Raspberry Pi ZERO + 3Gドングル + SORACOM SIM</code>の選択肢が一般的でした。そんな中「USBドングルでかい、Raspberry Pi ZERO意外とでかい、電源リソース苦しい、Arduino使いたい」という私の我儘を叶えられるモジュールはないかと奔走しましたが、そんな願ったり叶ったりなモノは見つからなかったため自作することにしました。</p>
-<h1 id="oshオープンソースハードウェア">OSH（オープンソースハードウェア）</h1>
-<h2 id="adafruitとの出会い">Adafruitとの出会い</h2>
-<p>安い3Gモジュールが無いかとネットの海を彷徨っていると、OSH（OpenSourceHardware）で有名なAdafruit Industriesの
+<p>At the time I built this (2016 or so), there were no relatively cheap modules that could use the mobile radio network. At the time, the most common choice for a cheap hobbyist environment with microcontroller-based 3G communication was <code>Raspberry Pi ZERO + 3G dongle + SORACOM SIM</code>. However, the USB dongle was too big, the Raspberry Pi ZERO was too big, and the power supply resources were too tight, so I decided to make my own module that would work best for me.</p>
+<h1 id="osh-open-source-hardware">OSH (Open Source Hardware)</h1>
+<h2 id="meet-adafruit">Meet Adafruit</h2>
+<p>While wandering the net looking for a cheap 3G module, I came across a relatively inexpensive ($79.95) module called 
 
 
 
@@ -161,43 +161,25 @@
 	class="underline "  target="_blank" rel="noopener"
 	>
 	Adafruit FONA 3G Cellular
-</a>（以下Fona）という比較的安価（$79.95）なモジュールに出会いました。Arduinoで利用するためのライブラリも提供されています。いたれりつくせりです。しかし技適という壁が立ちはだかり、購入しても日本では使えません。
+</a> from Adafruit Industries, famous for their OSH. They also provide a library to use it with Arduino. It&rsquo;s all very well. However, it is not available for use in Japan due to the TELEC（TELEC certification is required for many wireless devices used in Japan）.
 <img  class="mx-auto my-4"  src="https://cdn-shop.adafruit.com/640x480/2687-01.jpg" alt=""
 	>
 
 </p>
-<h2 id="モジュール部分を技適対応すればよいのでは">モジュール部分を技適対応すればよいのでは？</h2>
-<p>Fonaには3G通信用のモジュールに<code>SIM5320</code>が使用されていますが、特定のアンテナとセットで技適が取得されている<code>SIM5320J</code>という日本向けのモジュールがありました。モジュールをこれに置き換えて自分で作成してしまえば日本で使用することが可能です。そしてAdafruitの製品は全てOSH。全ての回路図が
-
-
-
-
-<a href="https://www.autodesk.co.jp/products/eagle/overview" 
-	class="underline "  target="_blank" rel="noopener"
-	>
-	Eagle
-</a>のデータ形式で公開されています。</p>
-<h2 id="改修内容">改修内容</h2>
-<p>AdafruitのモジュールはSIM5320の様々な機能を利用するために多くの部品が実装されていますが、通信するだけであれば部品点数を減らせそうだったため以下のような回路に修正することにしました。</p>
+<h2 id="replace-with-a-module-that-complies-with-the-telec">Replace with a module that complies with the TELEC</h2>
+<p>Fona uses <code>SIM5320</code> as a module for 3G communication, but there is a module for Japan called <code>SIM5320J</code>, which is TELEC certified with a specific antenna. There is a module for Japan, called <code>SIM5320J</code>, which has an A rating with a specific antenna, so I can replace the module with it and use it in Japan. All Adafruit products are OSH, and all schematics are available in Eagle data format.</p>
+<h2 id="remodeling-content">Remodeling content</h2>
+<p>The Adafruit module has a lot of parts implemented to take advantage of the various functions of the SIM5320, but I thought I could reduce the number of parts if I only wanted to communicate with it, so I decided to modify the circuit as follows.</p>
 <ul>
-<li>電話機能用のスピーカー回路削除</li>
-<li>イヤホンジャック削除</li>
-<li>バッテリーは電池駆動を想定したのでリチウム電池用の充放電管理回路を削除</li>
+<li>Deleted speaker circuit for phone function</li>
+<li>Remove earphone jack</li>
+<li>Removed charge/discharge management circuit for lithium batteries (to drive AAA batteries)</li>
 </ul>
-<h1 id="回路図に立ち向かう">回路図に立ち向かう</h1>
-<h2 id="自分の電気回路の知識レベル">自分の電気回路の知識レベル</h2>
-<p>電子工作の知識は全てインターネットとYouTuberから得ましたがそれでも何とかなったので、以降の話も特に電気回路の知識がなくても理解できると思います。</p>
+<h1 id="analyze-the-schematic">Analyze the schematic</h1>
+<h2 id="my-level-of-knowledge-of-electrical-circuits">My level of knowledge of electrical circuits</h2>
+<p>I got all my knowledge about electronics from the Internet and YouTubers, but I still understood it well enough. I think you don&rsquo;t need to know anything about electric circuits to understand what I&rsquo;m about to say.</p>
 <h2 id="osh">OSH</h2>
-<p>Adafruitに感謝しながら以下のリポジトリをクローンしましょう。ちなみに
-
-
-
-
-<a href="https://github.com/adafruit/Fritzing-Library" 
-	class="underline "  target="_blank" rel="noopener"
-	>
-	fritzing用のライブラリ
-</a>も公開しているようです（fritzing形式のFONAの回路図はありません）。</p>
+<p>Thanks to Adafruit, I can clone the repository below.</p>
 <ul>
 <li>
 
@@ -207,7 +189,7 @@
 <a href="https://github.com/adafruit/Adafruit-FONA-SIMCOM-3G-Breakout-PCB" 
 	class="underline "  target="_blank" rel="noopener"
 	>
-	FONA回路図（Eagle）
+	FONA schematic（Eagle）
 </a></li>
 <li>
 
@@ -217,11 +199,11 @@
 <a href="https://github.com/adafruit/Adafruit_FONA" 
 	class="underline "  target="_blank" rel="noopener"
 	>
-	FONAライブラリ
+	FONA library
 </a></li>
 </ul>
-<h2 id="回路図をみる">回路図をみる</h2>
-<p>
+<h2 id="read-the-schematic">Read the schematic.</h2>
+<p>If you don&rsquo;t have 
 
 
 
@@ -230,7 +212,7 @@
 	class="underline "  target="_blank" rel="noopener"
 	>
 	Eagle
-</a>をインストールしていない場合、まずインストールしましょう。思った以上に複雑でないことが分かると思います。それぞれの機能毎に回路図を分けて記述してあるので読みやすいですね。配線図は一見複雑なように見えますが、実際の配線は回路図からある程度Eagleの機能で自動生成できます。</p>
+</a>installed, install it first. You will find that it is not as complicated as you think. The schematics are described separately for each function, so they are easy to read. The wiring diagrams may look complicated at first glance, but the actual wiring can be generated automatically by Eagle&rsquo;s functions to some extent from the schematics.</p>
 <p><img  class="mx-auto my-4"  src="https://cdn-learn.adafruit.com/assets/assets/000/027/324/original/adafruit_products_schem.png" alt=""
 	>
 
@@ -239,21 +221,21 @@
 	>
 
 </p>
-<h2 id="不要な回路を削る">不要な回路を削る</h2>
-<p>前編で触れましたが、3G通信以外の機能が不要であれば以下の回路は不要なので今回は削除します。</p>
+<h2 id="delete-unnecessary-circuits">Delete unnecessary circuits</h2>
+<p>As mentioned in the first part, if I don&rsquo;t need any functions other than 3G communication, the following circuits are unnecessary and will be removed this time.</p>
 <ul>
-<li>電話機能用のスピーカー</li>
-<li>イヤホンジャック</li>
-<li>バッテリーは電池駆動を想定したのでリチウム電池用の充放電管理回路</li>
+<li>Speaker for phone function</li>
+<li>Earphone jack</li>
+<li>Charge/Discharge Management Circuit for Lithium Battery</li>
 </ul>
-<p>また、<code>FONA</code>自体は<code>Arduino</code>での利用を想定しているため<code>SIM5320</code>からの3.3V信号をレベルシフター（回路図の「LEVEL SHIFTING」の箇所の三角形の部品）で5V信号に変換しています。しかし、私は<code>ESP8266</code>での利用を想定しており、3.3V信号がそのまま利用できるのでレベルシフターも不要です。よって、回路図の以下のものは不要になります。</p>
+<p>Also, since <code>FONA</code> itself is designed to be used with <code>Arduino</code>, the 3.3V signal from <code>SIM5320</code> is converted to 5V signal with a level shifter (the triangular part in the &ldquo;LEVEL SHIFTING&rdquo; section of the circuit diagram). However, I am planning to use the <code>ESP8266</code>, and since the 3.3V signal can be used as it is, the level shifter is unnecessary. Therefore, the following items in the circuit diagram are unnecessary.</p>
 <ul>
 <li>3.5MM HEADPHONE/MIC</li>
 <li>LEVEL SHIFTING</li>
 <li>LIPO CHARGER</li>
 <li>AUDIO FILTERING</li>
 </ul>
-<p>それらを削除した後の回路図、配線図は以下のようになります。グッとシンプルかつ簡単になりましたね。アンテナのコネクタを小さくしたかったので、3G通信アンテナ用のコネクタをSMAからUFLに変更しましたがこれはどっちでもいいです（変換コネクタもあるので）。</p>
+<p>The schematic and wiring diagram after deleting them is as follows. It has become much simpler and easier. I wanted to make the antenna connector smaller, so I changed the connector for the 3G communication antenna from SMA to UFL, but it doesn&rsquo;t matter either way (there are conversion connectors).</p>
 <p><img  class="mx-auto my-4"  src="https://qiita-image-store.s3.amazonaws.com/0/167138/2665f1e4-c606-0bfc-8fd9-628e0ebe85bf.png" alt=""
 	>
 
@@ -262,7 +244,7 @@
 	>
 
 </p>
-<p>改修後の回路図の詳細は下記のリンクを参照して下さい。</p>
+<p>Please refer to the following link for the details of the modified schematic.</p>
 <ul>
 <li>
 
@@ -275,8 +257,8 @@
 	Adafruit-FONA-SIMCOM-3G-Breakout-PCB
 </a></li>
 </ul>
-<h2 id="発注する">発注する</h2>
-<p>基盤の設計が完了したら後は発注するだけです。発注先は
+<h2 id="place-an-order">Place an order</h2>
+<p>Once the design of the base is complete, all that is left is to place the order. I ordered from 
 
 
 
@@ -285,7 +267,7 @@
 	class="underline "  target="_blank" rel="noopener"
 	>
 	Seeed
-</a>です。
+</a>, a service called 
 
 
 
@@ -294,9 +276,9 @@
 	class="underline "  target="_blank" rel="noopener"
 	>
 	Fusion PCB
-</a>というサービスは、基盤の製造だけでなく部品の実装までそこそこな価格で対応してもらえます。
-今回の基盤は表面実装1台、基盤のみ5枚で<code>$100</code>ほどでした。FONAより<code>$20</code>程高くなっていますが単品の発注でここまで低価格に抑えられたのはすごいです。</p>
-<p>発注までの細かい流れは以下の記事が大変参考になりました。また、Seeedの
+</a>, which not only manufactures the board, but also mounts the components for a reasonable price.
+This time, the price was about <code>$100</code> for one surface mount and five boards only, which is about <code>$20</code> more than FONA, but it is amazing that they were able to keep the price so low for a single order.</p>
+<p>The following article is very helpful for the detailed process of ordering. Also, Seeed&rsquo;s 
 
 
 
@@ -305,7 +287,7 @@
 	class="underline "  target="_blank" rel="noopener"
 	>
 	twitter
-</a>は日本語対応OKで気さくに質問に答えてもらえます。</p>
+</a> page is available in Japanese and they can answer your questions.</p>
 <ul>
 <li>
 
@@ -320,24 +302,24 @@
 	Fusion PCBAでハードウェアを「コンパイル」する
 </a></li>
 </ul>
-<h2 id="実物を待つ">実物を待つ</h2>
-<p>どうもSIM5320Jの入手性が良くなかったらしく、納品まで1ヶ月ほどかかりました。実物を手にしたときは中々に感動しました。謎の配線が飛び出していますが、設計ミスでレギュレーターの配線がおかしくなっていた箇所を無理やり修理した痕跡です。</p>
+<h2 id="wait-for-it-to-arrive">Wait for it to arrive</h2>
+<p>Apparently, the availability of the SIM5320J was not good and it took about a month for delivery. It took about a month for delivery. There are some mysterious wires sticking out, but they are traces of a design error that forced me to repair the regulator wiring.</p>
 <p><img  class="mx-auto my-4"  src="https://qiita-image-store.s3.amazonaws.com/0/167138/8ee1a381-8110-9020-147b-83811be9ffe6.jpeg" alt=""
 	>
 
 </p>
-<h1 id="使ってみる">使ってみる</h1>
-<h2 id="ライブラリの修正">ライブラリの修正</h2>
-<p>Adafruitから提供されているライブラリは<code>SIM5320</code>の新しいファームウェアに対応しておらずSIM5320のATコマンドに関するドキュメントとにらめっこしながら修正しました。ちなみにAdafruitのHPにライブラリは現在大きい改修を実施していると記載されていますが、9ヶ月程放置されています。。。</p>
-<h2 id="完成した姿">完成した姿</h2>
-<p>実際に動かせる状態になったモジュールがこちらになります。
-こんな見てくれですが、しっかりSIMを認識して、AWS IoTにMQTTで色々Publishすることができました。</p>
+<h1 id="try-it">Try it</h1>
+<h2 id="fixing-the-library">Fixing the library</h2>
+<p>The library provided by Adafruit is not compatible with the new firmware of the <code>SIM5320</code> and I had to fix it by looking at the documentation on the AT commands of the SIM5320. The Adafruit website says that the library is currently undergoing a major overhaul, but it has been abandoned for about 9 months.</p>
+<h2 id="the-completed-figure">The completed figure</h2>
+<p>Here is the module that is actually ready to run.
+It looks like this, but it recognizes the SIM and publishes various things to AWS IoT via MQTT.</p>
 <p><img  class="mx-auto my-4"  src="https://qiita-image-store.s3.amazonaws.com/0/167138/058dd852-7efb-5e7f-cd9c-ad9973689649.jpeg" alt=""
 	>
 
 </p>
-<h1 id="次のステップ">次のステップ</h1>
-<p>今回はあくまでモジュールとして作成しましたが、マイコンを組み込んでシンプルなGatewayとして再設計してみたいと思います。</p>
+<h1 id="next-step">Next step</h1>
+<p>This time, I created it as a module only, but I would like to redesign it as a simple Gateway by incorporating a microcontroller.</p>
 
 </div>
 
@@ -351,10 +333,10 @@
 	
 	<div
 		class=" ml-auto  mt-1 text-center sm:text-right overflow-ellipsis pl-1">
-		<a href="https://nishinohi.github.io/en/blog/compact-gateway/">
-			<span class="underline">コンパクトなGatewayを作る</span>
+		<a href="https://nishinohi.github.io/en/blog/sin-taro-pan/">
+			<span class="underline">Renovation of a bakery</span>
 		</a>
-		<a class="ml-4 no-underline" href="https://nishinohi.github.io/en/blog/compact-gateway/">
+		<a class="ml-4 no-underline" href="https://nishinohi.github.io/en/blog/sin-taro-pan/">
 			<img src="/icons/top_arrow.svg" class="transform rotate-90 inline-block">
 		</a>
 	</div>
