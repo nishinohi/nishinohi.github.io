@@ -4,7 +4,7 @@ tags = ['matageek']
 date = 2021-06-25
 
 # For description meta tag
-description = "Recipe of the legendary Krabby Patty."
+description = "matageek"
 
 # Comment next line and the default banner wil be used.
 banner = 'img/matageek.png'
@@ -13,148 +13,137 @@ banner = 'img/matageek.png'
 
 ![](img/matageek.png)
 
-# MATAGEEKって何？
+# What is MATAGEEK?
 ---
-一言でいうとBLEメッシュネットワークを利用した狩猟用わなの検知及び通知システムです。
+In a nutshell, it is a detection and notification system for hunting traps using BLE mesh network.
 
-# わな猟って大変ですよね
+# Trap hunting is a tough job
 ---
-狩猟といえば猟銃のイメージがありますが、わな猟も重要な方法の一つです。しかし仕掛けたわなは原則毎日見回りを実施する必要があります。[^1]（非狩猟鳥獣がかからないように、手負いの動物をつくらないように等）また獲物がかかった場合もできる限り早急に対処できた方が理想的です。
+Hunting is often associated with hunting rifles, but trap hunting is also an important method. However, in principle, the traps that have been set need to be patrolled every day.[^1] (To prevent non-hunting birds and animals from being caught, to prevent wounded animals from being created, etc.) Also, it is ideal to be able to take action as soon as possible when prey is caught.
 ![](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/167138/96263081-cac6-4885-2b5d-d6f0faa54969.png)
-ということでイメージとしては以下のようなものが出来上がれば色々便利そうです。
+So, if we can create something like the following image, it will be very useful.
 ![](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/167138/8d2f2fb1-1e60-9222-44d6-5aff25b38ba4.png)
-わなが作動したときに通知を送信するようなものであれば[SORACOM LTE-M Button](https://soracom.jp/store/5208/)などの市販のIoTモジュールで割と事足ります。ですがわな猟は捕獲率を上げるために動物の通りそうな箇所にわなを複数個仕掛けるのが一般的で、それぞれのわなにIoTモジュールを配置するのは費用的に個人で可能なレベルとは少し言いにくいです。（ピンきりですがLTE回線等が使用できるモジュールは安くても1万円はするので）
+If it is something that sends a notification when the trap is activated, commercially available IoT modules such as SORACOM LTE-M Button[SORACOM LTE-M Button](https://soracom.jp/store/5208/)will be sufficient. However, in order to increase the capture rate of traps, it is common to place multiple traps in areas where animals are likely to pass, and placing an IoT module in each trap is a little difficult to say that it is possible for an individual in terms of cost. The cost of placing IoT modules in each trap is a little too high to be feasible for an individual.
 
-# メッシュネットワーク
+# Mesh Network
 ---
-上記の問題を解決するために、今回はBluetoothを用いたメッシュネットワークを利用します。市販品でも親機（LTE回線が使用できるもの）と子機（親機と短距離通信ができるもの）でネットワークを作るIoTモジュールもありますが、狩猟用に利用できそうなものではスター型のネットワークのものしか調べた限りなさそうでした。（あったら教えてほしいです）
+In order to solve the above problem, we will use a mesh network using Bluetooth. There are IoT modules on the market that create a network with a parent device (that can use LTE lines) and child devices (that can communicate with the parent device over a short distance), but as far as I could find, the only ones that could be used for hunting are star-shaped networks. (If there are any, please let me know.)
 ![](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/167138/2f2d1010-2abe-52d4-e1ff-b20e35fe1b86.png)
-ここでBluetoothに詳しい人であれば「あ〜`Bluetooth5.0`の`Bluetooth Mesh`ね」と思われたでしょう。しかしBluetoothにもう少し詳しい人であれば表題に違和感を覚えたはずです。`Bluetooth 5.0`で追加された`Bluetooth Mesh`は`Bluetooth Low Energy（BLE）`に基づいてはいますが**低消費電力ソリューションではありません**。
-簡単に説明すると`Bluetooth Mesh`は接続を維持するために仕様上無線をオフにすることができません。そしてBluetooth機器における電力消費の主たるものは無線です。一部のノード（メッシュ内の一つのBluetoothデバイスのこと）を低消費電力モード（Low Powerモード）で稼働させることは仕様的にも可能ですが、Low Powerモードと通信するノードはLow Powerモードにすることができません。つまり、**全てのノードを低消費電力で稼働させることは仕様上不可能**です。
-となると表題の低消費電力狩猟用モジュールとは一体どういうことなのとなります。実は今回のメッシュネットワークは**Bluetooth 4のBLE機能のみ**でメッシュネットワークを形成することで低消費電力を実現しています。
+If you are familiar with Bluetooth, you may have thought `Bluetooth Mesh with Bluetooth 5.0`. However, if you are a little more familiar with Bluetooth, you must have felt uncomfortable with the title. The `Bluetooth Mesh` added in `Bluetooth 5.0` is based on `Bluetooth Low Energy (BLE)`, but **it is not a low power solution**.
+In a nutshell, `Bluetooth Mesh` can't be turned off by specification to stay connected. And the radio is the main source of power consumption in Bluetooth devices. It is possible to run some nodes (one Bluetooth device in the mesh) in low power mode (Low Power mode), but the nodes that communicate with Low Power mode cannot be in Low Power mode. In other words, **it is impossible to operate all nodes in low power mode**.
+In other words, it is impossible to run all nodes in low power mode. In fact, this mesh network achieves low power consumption by forming a mesh network using only the BLE function of `Bluetooth 4`.
 
 # FruityMesh
 ---
 ![](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/167138/19df096e-8859-64b8-defa-828207ac3a32.png)
-[FruityMesh](https://github.com/mwaylabs/fruitymesh)という`Bluetooth 4`の`BLE`のみでメッシュネットワーク作成しているPJがあります。このPJについて色々説明したいのですがそれだけで記事3つくらいの分量になりそうなので今回は詳細な説明は省きます。このPJでは実際に消費電力を計測したところ電力消費の高いスキャニング（デバイスを探す機能）でも**1mA以下**でした。またメッシュ内のノードがある個数まで達したときスキャニングを停止することが可能であれば、ノードの個数にもよりますがおおよそ**150-250µA**で稼働させることができるようです。今回はこれに色々手を加えつつ、スマホからもノードの情報を取得したり操作できるようにします。偉大なる先人に感謝🙏
+There is a PJ called [FruityMesh](https://github.com/mwaylabs/fruitymesh) that creates mesh networks using only `BLE` of `Bluetooth 4`. I'd like to explain a lot about this PJ, but it would take up about three articles, so I'll skip the detailed explanation this time. In this PJ, we actually measured the power consumption and found that it was **less than 1mA** even during scanning (a function that searches for devices), which consumes a lot of power. Also, if it is possible to stop scanning when the number of nodes in the mesh reaches a certain level, it seems to be possible to run the system at approximately **150-250µA**, depending on the number of nodes. I'm going to make some changes to this so that I can get node information and control it from my phone. Thanks to our great predecessors🙏
 
-# 構成
+# Composition
 ---
 
-## 狩猟用わなモジュール構成
+## Hunting traps module configuration
 ![](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/167138/50e962de-9d79-3075-4b01-ccf83bd2ff61.png)
 
-メッシュ内に最低でも一つゲートウェイ機能（LTE回線が利用できる）があるノードを含め、任意の数のノードでメッシュネットワークを形成します。ノードを設置するフローは以下のようになります。
+Form a mesh network with an arbitrary number of nodes, including at least one node in the mesh that has a gateway function (LTE line is available). The flow of setting up a node is as follows.
 
-* スマートフォンなどからノードに接続しノードを任意のネットワークに登録（エンロール）する
-* メッシュネットワーク内のノードを設置モードにしてわなを仕掛けた場所に設置する
-* メッシュネットワーク内のノードを探知モードにする
+* Connect to a node from a smartphone, etc., and register the node to an arbitrary network (Enroll)
+* Set the nodes in the mesh network to installation mode and place them in the traps.
+* Put the nodes in the mesh network into detection mode
 
-### ノードを任意のネットワークに登録（エンロール）する
-ノードは特定のノードとのみメッシュネットワークを作成する必要があります。（そうでないと赤の他人が近くに設置した場合相互に接続してしまいます）そのためノードには以下の２つの情報を付与することで特定のネットワークに所属させることができます。（これを登録（エンロール）と呼んでいます）これは`Bluetooth Mesh`での`Provisioning`に対応していると考えてもらっていいと思います。（参考：[Provisioning a Bluetooth Mesh Network](https://www.bluetooth.com/blog/provisioning-a-bluetooth-mesh-network-part-1/)）
-* ネットワークID
-* ネットワークキー
+### Register (Enroll) a node to an arbitrary network
+Nodes need to create mesh networks only with specific nodes (otherwise they will connect to each other if strangers place them nearby). For this reason, a node can belong to a specific network by providing the following two pieces of information. Therefore, a node can be made to belong to a specific network by adding the following two information (this is called "Enroll"), which is equivalent to "Provisioning" in `Bluetooth Mesh`.（Reference：[Provisioning a Bluetooth Mesh Network](https://www.bluetooth.com/blog/provisioning-a-bluetooth-mesh-network-part-1/)）
+* Network ID
+* Network Key
 
-ネットワークIDは自身が所属すべきネットワークの識別ID、ネットワークキーは16byteで構成される対象のネットワークに接続するための共通鍵です。これにより例えば自分と他人がネットワークIDを同じ`1`としてエンロールしてもネットワークキーが異なれば接続されません。この機能はFruityMeshに実装されている標準機能で実現できますが、現状の実装だとノードを個別に有線（UART等）でエンロールする必要があるため以下のような機能を追加して処理が一度で済むようにしています。
+The network ID is the identification ID of the network to which you belong, and the network key is the common key to connect to the target network, which consists of 16 bytes. The network ID is the ID of the network to which you belong, and the network key is the common key to connect to the target network. This function can be realized by the standard function implemented in FruityMesh, but in the current implementation, it is necessary to enrol each node individually by wire (UART, etc.), so we have added the following function so that the process can be done only once.
 
-* ノードは初期状態ではデフォルトのネットワークIDとネットワークキーで起動し、同じく初期状態のノード同士でメッシュネットワークを作成する
-* 初期状態のノードにスマートフォンで接続し、ネットワークIDとネットワークキーをメッシュネットワーク内のノードに送信する
+* Nodes initially start with the default network ID and network key, and mesh networks are created between nodes that are also in the initial state.
+* Connect to the node in the initial state with a smartphone and send the network ID and network key to the nodes in the mesh network.
 
-ただしこの機能は初期状態のノードは同じく初期状態のノードと無差別にメッシュネットワークを形成するため、登録作業は自身の所持しているノード以外のノードが存在しない環境で実施する必要があります。
+However, since the initial state node forms a mesh network indiscriminately with other initial state nodes, the registration process must be performed in an environment where there are no other nodes other than the node in your possession.
 
-### 設置モードと探知モード
+### Installation mode and detection mode
 ![](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/167138/fffb7bb2-e6a5-edfe-c20d-eb38d22af4a4.png)
-モードの切り替え機能は狩猟用モジュールとして追加した機能の一つです。これらのモードの違いは主にBluetoothのスキャニングの頻度であり、つまるところ消費電力の違いです。設置モードはスキャニングの頻度を高め電力を多めに消費するかわりに他のノードが探しやすくなります。逆に探知モードのノードは現在の接続を維持しつつ他のノードを探さなくなるかわりに消費電力を大幅に抑えることが可能です。
-猟場にわなを設置する場合は設置モードに設定し、わな設置後期待通りのメッシュネットワークが形成されていれば探知モードに切り替えて長時間稼働させるという使用方法を想定しています。
+The ability to switch modes is one of the features we added as a hunting module. The difference between these modes is mainly in the frequency of Bluetooth scanning, which in turn is a difference in power consumption. Placement mode scans more frequently and consumes more power, but makes it easier to find other nodes. On the other hand, a node in detection mode can consume much less power while maintaining its current connection and not searching for other nodes.
+When setting up a trap in a hunting ground, the system is set to installation mode, and if a mesh network is formed as expected after the trap is set, the system is switched to detection mode for extended operation.
 
-## インフラ構成
-メッシュ内の何れかのノードが作動した場合ユーザーに通知を送信します。図ではブラウザで情報を見れるような記述がありますが今回そこは説明しませんというかまだできてません😂
+## Infrastructure
+It sends a notification to the user when any of the nodes in the mesh is activated. In the diagram, there is a description of how the information can be viewed in a browser, but I won't explain that in this article, or rather I haven't done it yet 😂.
 
 ![](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/167138/46123292-871e-7002-a38d-8c093b3c0d78.png)
 
-後述するSORACOM BEAMによる暗号化を利用するための証明書や秘密鍵の発行はAWS IoTを利用しています。これでSIM毎に個別の暗号化ができるのでもしこの仕組みを利用したい方がいればそれぞれでセキュリティを担保できます。
+AWS IoT is used to issue certificates and private keys for using SORACOM BEAM encryption, which will be described later. This allows for individual encryption for each SIM, so if anyone wants to use this mechanism, security can be guaranteed for each.
 
-# 暗号化
+# encryption
 ---
-簡単では無いですが避けては通れないのが暗号化です。今回は2種類の通信でそれぞれに暗号化が必要です。
+Encryption is not easy, but it is unavoidable. In this case, encryption is required for each of the two types of communication.
 
-* わなの作動情報をAWS IoTへ送信する際の暗号化
-* メッシュネットワーク内の通信の暗号化
+* Encryption of trap actuation information sent to AWS IoT
+* Encryption of communications within a mesh network
 
-メッシュネットワーク内の通信はローカルネットワークなので、スニッフィングするにはわなが設置されている場所まで赴く必要があります。ですので正直そこまで気にしなくてもという気もしますがFruityMeshにすでに暗号化の機能が実装されているのでありがたく利用します。
+Since communication in a mesh network is a local network, you need to go to the location where the traps are set up to sniff them. So, to be honest, I don't think we need to worry about it that much, but since FruityMesh already has the encryption feature, I'm grateful for it.
 
-## わなの作動情報の暗号化
+## Encryption of trap actuation information
 
-主にIoTなどで利用されるMQTTプロトコルでわなの作動状況を送信しますが、そのままでは何も暗号化されていないのでMQTTSを使用したいところです。しかしMQTTSを使用するには一般的なIoTデバイスの乏しいリソース（今回は64Mhz、256KB SRAM程度のものを使用します）では少々辛い部分があります。そこで活躍してくれるのが[SORACOM BEAM](https://soracom.jp/services/beam/)です。SORACOM BEAMはIoTデバイスにかかる暗号化等の高負荷処理や接続先の設定をクラウドにオフロードできるサービスです。
-デバイス側は下図のようにキャリアの閉域網からBeamのエンドポイントへ暗号化されていないパケットを送信するだけです。その後Beam側が受信したパケットを指定された暗号化方式で暗号化して指定された送信先へパケットを転送してくれます。
+The MQTT protocol, which is mainly used in IoT, is used to send the operating status of the trap, but since nothing is encrypted as it is, we would like to use MQTTS. However, using MQTTS is a bit difficult with the limited resources of a typical IoT device (in this case, we will use 64Mhz and 256KB SRAM). That's where [SORACOM BEAM](https://soracom.jp/services/beam/) comes in, a service that allows you to offload high-load processing such as encryption and connection settings to the cloud for IoT devices.
+The device side simply sends unencrypted packets from the carrier's closed network to the Beam endpoint, as shown in the figure below. The Beam side then encrypts the received packets using the specified encryption method and forwards the packets to the specified destination.
 ![](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/167138/db602a56-c17b-2387-4ac7-0f00ae952274.png)
 
-## メッシュネットワーク内での通信の暗号化
+## Encryption of communications within a mesh network
 
-`Bluetooth 4`では[ペアリングとボンディング](https://www.bluetooth.com/blog/bluetooth-pairing-part-1-pairing-feature-exchange/#:~:text=Bonding%20is%20the%20exchange%20of,that%20allows%20bonding%20to%20occur.)による暗号化が仕様として策定されていますが、FruityMeshでは独自の暗号化を利用しています。`GAP`（Bluetoothでの通信の基本的な規約のようなもので暗号化もここで規定されています）の**非暗号化通信にアプリケーション層で独自の暗号化**を実施しています。（この仕様は異なるデバイスでの相互運用を目的としているようです）暗号化の方式は簡単に言うと共通鍵暗号方式です。ノード間でコネクションを確立した際、一定のタイムアウト内で乱数を共通鍵で暗号化したパケットを交換することでお互いを認証しています。
+Although [pairing and bonding](https://www.bluetooth.com/blog/bluetooth-pairing-part-1-pairing-feature-exchange/#:~:text=Bonding%20is%20the%20exchange%20of,that%20allows%20bonding%20to%20occur.) encryption is defined in the `Bluetooth 4` specification, FruityMesh uses its own encryption. It uses its own encryption at the application layer for unencrypted communication of `GAP` (which is like a basic convention for Bluetooth communication and encryption is also specified here). (This specification seems to be intended for interoperability among different devices.) The encryption method is simply called symmetric key cryptography. When a connection is established between nodes, they authenticate each other by exchanging packets encrypted with a random number using a symmetric key within a certain timeout.
 
-# 使用する機材
+# Devices
 ---
 
-## メッシュネットワーク用デバイス
-ここまできてやっと実際どんな機材を使うのかという話です。今回は比較的長い距離（実測で見通し距離30m程）でも通信できる[Nordic nRF52840](https://www.nordicsemi.com/Products/Low-power-short-range-wireless/nRF52840/GetStarted?lang=ja-JP)を使用します。このSoCを使用していて国内で使用できる（技適的な意味で）ものはそんなに多くなく、購入の容易さから大体以下の２つかなと思います。プログラムはJ-LINKで書き込むためSWDのコネクタがついているAdafruitの方が便利かなと思います。SparkFunの方にもついてはいるんですが物理的にちょっと使いにくい作りになっています。
+## Devices for Mesh Networks
+I'm talking about what kind of equipment to actually use. This time, we will use the [Nordic nRF52840](https://www.nordicsemi.com/products/nrf52840/), which is capable of communicating over a relatively long distance (about 30m in sight distance by actual measurement). There are not so many products that use this SoC and can be used in Japan (telec mark is required in Japan), and from the ease of purchase, I think the following two are the best. Adafruit has a SWD connector for writing programs via J-LINK, and SparkFun also has a SWD connector, but it is physically difficult to use.
 
 * [SparkFun Pro nRF52840 Mini](https://www.sparkfun.com/products/15025)
 * [Adafruit Feather nRF52840 Express](https://www.adafruit.com/product/4062)
 ![](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/167138/adbbe057-a68f-213d-6836-94bcd5ff0405.png)
 
-Nordic製品の開発は[SEGGER Embedded Studio](https://www.segger.com/products/development-tools/embedded-studio/)を利用することが多いようですが、 VSCodeでも開発可能で私は後者で開発しています。簡単な開発の手引のような記事を書いたことがあるので一応紹介しておきます。
+It seems that [SEGGER Embedded Studio](https://www.segger.com/products/development-tools/embedded-studio/) is often used for development of Nordic products, but it is also possible to develop with VSCode, and I have been developing with the latter. I have written a simple guide for development, which I would like to introduce here.
 
 * [VSCode + ARM GNU ToolsでNordicの開発環境を構築する](https://qiita.com/nishinohi/items/545521df7b06e66149c9)
 
-FruityMeshでも環境の構築方法が紹介されているのでFruityMeshを自身でビルドする際は[ここ](https://www.bluerange.io/docs/fruitymesh/Quick-Start.html)を参照してください。CMakeを利用しているのでNordicの開発環境の構築方法とは少し異なります。
+FruityMesh also introduces how to build the environment, so please refer to [here](https://www.bluerange.io/docs/fruitymesh/Quick-Start.html) when you build FruityMesh yourself.Since we are using CMake, it is a little different from the way Nordic development environment is built.
 
-## ゲートウェイ
-ゲートウェイに関しては好みのものを使用する感じです。BluetoothデバイスからゲートウェイへUART等でわなの作動状況等を送信し、最終的にクラウドへ送信してもらいます。SORACOM BEAMを使用する場合SORACOM SIMを利用できるものが良いと思います。ちなみにSORACOMでの各種サービスの動作確認済みのデバイスは[ここ](https://soracom.jp/support_partners/certified_device/)で公開されています。しかしながら実際ゲートウェイに求めている機能はキャリア網を使用してパケットを送信するだけなので市販のゲートウェイでは機能過多な感じは否めません。以前私は自分でキャリア網を使用するためだけの小さなモジュールを作ってみたので参考までに紹介しておきます。
+## Gateway
+If you want to use a SORACOM BEAM, you should use a SORACOM SIM. If you use SORACOM BEAM, you should use SORACOM SIM. For your information, devices that have been confirmed to work with various SORACOM services are available [here](https://soracom.jp/support_partners/certified_device/). However, since the actual function you are looking for in a gateway is just to send packets using a carrier network, I can't deny that commercial gateways have too many functions. In the past, I made a small module just for using the carrier network, and I'd like to introduce it here for your reference.
 
-* [WiFi・GPS機能付き3Gモジュールを作る](https://qiita.com/nishinohi/items/752f94ec1fe6b11e6e8d)
+* [Create a 3G module with WiFi and GPS functions](en/tags/hw/)
 
-# メッシュネットワークとスマートフォンの接続
+# Connecting Mesh Networks and Smartphones
 ---
-FruityMeshは有線（UART等）でターミナルのようにコマンドを受け付ける機能が備わっており、それを用いて各種設定や登録処理が可能ですがどうせならスマートフォンからそのような操作を実行したいところです。
+FruityMesh is equipped with a function to accept commands like a terminal via wire (UART, etc.), and various settings and registration processes can be performed using it, but I would like to execute such operations from my smartphone anyway.
 ![](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/167138/2ec10a07-89e3-d2fd-afeb-535368093ad2.png)
 
-FruityMeshにはスマートフォンとの接続を考慮した機能が実装されています。しかしFruityMeshのメッシュネットワークに接続できるスマートフォンアプリ自体は特に無いので自前で開発しました。現状Androidのみ対応で整理しきれていないのとセキュリティキーの保存の方法が完全にアウトなのでリンクは貼りませんが気になる方は連携しているGithubのアカウントで公開はしているのでどうぞ。
+FruityMesh has a function to connect to a smartphone. However, there is no smartphone application that can connect to the FruityMesh mesh network, so we developed our own. I'm not going to post a link to it because it's currently only available for Android and the way to save the security key is completely out of the question, but if you're interested, I've published it on my [Github](https://github.com/nishinohi/FruityMeshAppUart) account.
 
-アプリの操作画面は以下のようになります。
+The operation screen of the app looks like this
 
-## ノードのスキャニング
+## Scanning a node
 ![](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/167138/c4170459-f24e-a306-a29f-21ae613f65b3.png)
-アドバタイズパケット（Bluetoothデバイスを発見してもらうためのパケット）にFruityMeshのService IDが含まれているもののみを表示します。また、[ノードのエンロール](###-ノードを任意のネットワークに登録（エンロール）する)で説明した初期状態のノードはアイコンが灰色で表示されます。ちなみに`MataGeek`というのはこのPJの名称です。（マタギ＋ギーク）
+Only the advertisement packets (packets to have the Bluetooth device discovered) that contain the Service ID of FruityMesh will be displayed. Also, the initial state nodes described in the node enrolment will be displayed with gray icons. Note that `MataGeek` is the name of this PJ. (Matagi (refers to those who hunt in groups in Japan) + Geek)
 
-## ノードのエンロール
+## Node enrollment
 ![](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/167138/2dcc4a33-11de-a26c-6556-8f6dd305fe6c.png)
-現状はACTIVATEのボタンを押すと端末（スマートフォン）に保存済みのネットワークIDとネットワークキーを送信します。エンロールされたノードは設定された内容で再起動します。
+Currently, pressing the ACTIVATE button will send the network ID and network key already stored in the terminal (smartphone). Enrolled nodes will be rebooted with the configured settings.
 
-## モードの変更
+## Mode change
 ![](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/167138/34d0af56-e54d-7d00-20d7-c5430520a21a.png)
-START DETECTを押すとモードを探知モードに変更できます。逆に探知モードの状態だと設置モードに変更できます。ノードの基本的な情報もここで知ることができます。
+Press START DETECT to change the mode to detection mode. Conversely, if you are in detection mode, you can change to installation mode. Basic information about the node can also be found here.
 
-* ClusterSize
-  * メッシュネットワーク内のノードの数
-* Mode
-  * 現在のモード（SETUPは設置モードを表します）
-* Device Name
-  * デバイス名（任意に変更可能）
-* Trap State
-  * わなの作動状況
-* Battery
-  * バッテリー残量
-
-# バッテリー問題
+# Battery problem
 ---
 
-以上の構成でおそらく目的の機能は達成できたかなと考えています。しかしここまで説明しておいてなんですが私は電気回路等は完全に独学でまともな知識が無いので電源をどうすべきか悩んでいます。というのも以下の内容の正しい答えがわかっていません。
+With the above configuration, I think I have achieved the desired function. However, I'm not sure what I should do with the power supply since I'm completely self-taught in electrical circuits and don't have any proper knowledge. I don't know the correct answer to the following questions.
 
-* 不燃の小型で高用量バッテリーってある？
-* 低消費電力用の電源回路ってどんなの？
+* Is there a small, high-dose battery that is non-flammable?
+* I don't know how to design a power supply circuit for low power consumption.
 
-まずバッテリーはできればリチウムイオンバッテリーを使用したいですが、最悪ノードを山中に紛失する可能性がある以上可燃性のものは避けたいです。
-自分で試す電気回路の電源はいつも三端子レギュレータを使用していました。これが低消費電力プロダクトに向いていないことは知っているのですが、どのようなものが向いているのか正直よくわかっていません。もしどなたかご存知でしたら教えて下さい。
+For the battery, I would like to use a lithium-ion battery if possible, but I don't want to use anything flammable as long as the worst case scenario is that I might lose the node in the mountains.
+I have always used a three-terminal regulator to power the electrical circuits I try. I know that this is not suitable for low power products, but I honestly don't know what kind of products are suitable. If anyone knows, please let me know.
 
 [^1]: 第Ⅱ章 捕獲に関する基礎知識 - 農林水産省
