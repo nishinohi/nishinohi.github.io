@@ -13,8 +13,8 @@ banner = 'img/guraduation/asset-4.jpg'
 
 ![](img/guraduation/asset-en-0.png)
 ![](img/guraduation/asset-en-1.png)
-![](img/guraduation/asset-2.png)
-![](img/guraduation/asset-3.png)
+![](img/guraduation/asset-en-2.png)
+![](img/guraduation/asset-en-3.png)
 ![](img/guraduation/asset-4.png)
 ![](img/guraduation/asset-6.jpg)
 ![](img/guraduation/asset-7.jpg)
