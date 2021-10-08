@@ -1,7 +1,7 @@
 +++
 title = "Creating a compact 3G module"
 tags = ['matageek', 'hw']
-date = 2018-05-16
+date = 2020-10-25
 
 # For description meta tag
 description = "Creating a compact 3G module"

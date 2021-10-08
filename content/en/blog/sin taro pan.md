@@ -1,7 +1,7 @@
 +++
 title = "Renovation of a bakery"
 tags = ['architecture']
-date = 2020-06-25
+date = 2020-08-01
 
 # For description meta tag
 description = "bakery"

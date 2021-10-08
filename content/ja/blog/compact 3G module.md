@@ -1,7 +1,7 @@
 +++
 title = "コンパクトな3G通信モジュールを作る"
 tags = ['matageek', 'hw']
-date = 2018-05-16
+date = 2020-10-25
 
 # For description meta tag
 description = "Recipe of the legendary Krabby Patty."

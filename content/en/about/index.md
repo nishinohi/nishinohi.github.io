@@ -7,8 +7,8 @@ title = "about me"
 <br>
 
 * Osaka University, Division of Global Architecture School（2012 graduate）
-* Osaka University, Division of Global Architecture Graduate School of Engineering（201４ graduate）
-* Labo：Architectural and Urban Ergonomics
+* Osaka University, Division of Global Architecture Graduate School of Engineering（2014 graduate）
+* Labo：[Architectural and Urban Ergonomics](http://www.arch.eng.osaka-u.ac.jp/~labo5/)
 
 # Activities as a student
 ---
@@ -20,11 +20,15 @@ title = "about me"
 * [Japan's Best Graduation Design Competition 2012](http://gakuseikaigi.com/nihon1/12/index.html) -> [To be approved](http://gakuseikaigi.com/nihon1/12/result1.html)
   * [Related Books](https://www.amazon.co.jp/dp/B01ERQKSDG/ref=dp-kindle-redirect?_encoding=UTF8&btkr=1)
 * [Architectural Institute of Japan Design competition 2012](https://www.aij.or.jp/kyouikuhukyuuzigyoukankei/v400-12.html) -> [chosen](https://www.aij.or.jp/jpn/symposium/2012/1211_058-075.pdf)
-* [UNION Design Award 2013](https://www.uffec.com/archives2013)（Judge：Sousuke Fujimoto） -> [honorable mention](https://www.uffec.com/5rty0svphqyr-2/%E5%8A%9B%E3%82%A4%E3%82%BF%E3%82%A4%E3%83%A6%E3%82%A6%E3%82%B4%E3%82%A6)
+* [UNION Design Award 2013](https://www.uffec.com/archives2013)（Judge：[Sou Fujimoto](https://en.wikipedia.org/wiki/Sou_Fujimoto)） -> [honorable mention](https://www.uffec.com/5rty0svphqyr-2/%E5%8A%9B%E3%82%A4%E3%82%BF%E3%82%A4%E3%83%A6%E3%82%A6%E3%82%B4%E3%82%A6)
 
 ### Planning, Design, Construction
 
 * [Renovation of a bakery 2014](/en/blog/sin-taro-pan/)
+
+### Design assignment
+
+* [Archive](en/tags/architecture/)
 
 # Work history
 ---

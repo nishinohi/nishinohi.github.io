@@ -1,7 +1,7 @@
 +++
 title = "卒業設計"
 tags = ['architecture']
-date = 2020-06-25
+date = 2020-07-01
 
 # For description meta tag
 description = "graduation work guraduation"

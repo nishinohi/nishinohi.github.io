@@ -1,7 +1,7 @@
 +++
 title = "Creating a Compact Gateway"
 tags = ['matageek', 'hw']
-date = 2020-06-25
+date = 2021-01-25
 
 # For description meta tag
 description = "Creating a Compact Gateway"

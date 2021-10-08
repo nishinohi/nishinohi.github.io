@@ -1,7 +1,7 @@
 +++
 title = "小さく暮らし大きく開く"
 tags = ['architecture']
-date = 2020-06-25
+date = 2020-10-01
 
 # For description meta tag
 description = "Apartment"

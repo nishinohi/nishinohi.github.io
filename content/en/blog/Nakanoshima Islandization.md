@@ -1,7 +1,7 @@
 +++
 title = "Nakanoshima Islandization"
 tags = ['architecture']
-date = 2020-06-25
+date = 2020-09-01
 
 # For description meta tag
 description = "art museum"

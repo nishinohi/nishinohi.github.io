@@ -28,30 +28,9 @@ FruityMesh  FruityMesh というBluetooth 4のBLEのみでメッシュネット�
     </item>
     
     <item>
-      <title>Nakanoshima Islandization</title>
-      <link>https://nishinohi.github.io/blog/nakanoshima-islandization/</link>
-      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://nishinohi.github.io/blog/nakanoshima-islandization/</guid>
-      <description>Concept 大阪の中にありながら周囲を水で囲まれた中之島は水都大阪の要であり、水運を利用した様々な交易の中心であり文化の発祥地でもあった。だが、大規模な橋や幹線道路の整備、地下鉄の普及により中之島はその島としてのコンテクストを失いただの地続きの土地のように認識されている。
-この美術館は中之島を文化の発祥地として再度「島化」する計画である。周囲を水で囲まれたその土地にはかつて水運を担った船が発着を繰り返し、訪れる人々に島という特別な場としての中之島を再認識させるだろう。</description>
-    </item>
-    
-    <item>
-      <title>カイタイユウゴウ</title>
-      <link>https://nishinohi.github.io/blog/kaitaiyugou/</link>
-      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://nishinohi.github.io/blog/kaitaiyugou/</guid>
-      <description>Concept 家族が多ければ多いほど必要な部屋数は増し様々な空間の大きさもより増大する。しかしながら、家族構成の変化に伴い家に求められる大きさはいずれ縮小する。
-そのとき家は変化にどう対応できるだろうか。使われなくなった子供部屋、夫婦2人には少し大きいリビング、余った寝室。それらを外部に開放して家の内部面積を縮小し外部空間を拡大する。
-このとき家々はその素材や構造を複雑に絡ませながらゆるやかに広がり周囲と交わり複雑な境界を作っていくだろう。</description>
-    </item>
-    
-    <item>
       <title>コンパクトなGatewayを作る</title>
       <link>https://nishinohi.github.io/blog/compact-gateway/</link>
-      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://nishinohi.github.io/blog/compact-gateway/</guid>
       <description>何を作ったのか  以前に作成した3G通信モジュールを参考に、マイコンとLTEモジュールを組合わせたコンパクトなGatewayを作成しました。
@@ -64,50 +43,9 @@ EC25-Jは特別な入手経路  実は今回LTE用のモジュールとして実
     </item>
     
     <item>
-      <title>パン屋の改修</title>
-      <link>https://nishinohi.github.io/blog/sin-taro-pan/</link>
-      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://nishinohi.github.io/blog/sin-taro-pan/</guid>
-      <description>2013年（大学院2年）に阪急石橋駅にあるタローパンというパン屋の改修を設計施工（予算300万円）。地元の工務店の助けもあり新築ではないものの企画から設計、施工にも深く携わることができ、スケジュールもオーバーせず無事竣工しました。
-壁は友人の協力の元全て漆喰で仕上げています。什器やイートインスペースのテーブル、椅子は地元の溶接工の方と協力して全て手作りで作成しました。 下図は現況写真とリニューアルにあたって私が作成したポスターです。
-模型やCGでイメージを共有しながら、5つほど改修案を提案し施主に計画内容を決定してもらいました。 打ち合わせを通していく中で、施主は自分が思っている以上にこの改修を無事終えられるか不安に感じていることがわかりました。このとき改めて自分が今まで取り組んできた設計はあくまで課題でしかなく、施主に納得してもらうという重要なフェーズが未経験であることを実感しました。 何のリスクもなく進めていける課題と違い、実際に何かを作るには設計以外の様々な問題をこなす必要があることを改めて学ぶことができました。 改修後の様子  </description>
-    </item>
-    
-    <item>
-      <title>卒業設計</title>
-      <link>https://nishinohi.github.io/blog/graduation-work/</link>
-      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://nishinohi.github.io/blog/graduation-work/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>小さく暮らし大きく開く</title>
-      <link>https://nishinohi.github.io/blog/live-small-open-wide/</link>
-      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://nishinohi.github.io/blog/live-small-open-wide/</guid>
-      <description>Concept 開口部を居住者や内部空間の都合ではなく都市の風景を眺める歩行者のために設計する。居住者は連続的に変形するルーバーの形に合わせて都市の風景の一部として居住空間を演出する。
-南堀江というコンパクトシティにおいて歴史的経緯のあるビルディングのファサードを失わずに歩行者のためのファサードを形成するとき、新たな都市の風景が生まれるかもしれない。
-このルーバーは見る角度によって内部の見え方にグラデーションをかける装置になる。ルーバーは見る角度によって開口部となりなったり重なりあって壁面のようにも振舞う。
-ルーバーの長さの変化により、周囲に見せたい空間(Public)、見られたくない空間(Private)の調整が可能なり、周囲を歩く人に対しグラデーションのある風景を作り出す。</description>
-    </item>
-    
-    <item>
-      <title>陶芸家のための住宅</title>
-      <link>https://nishinohi.github.io/blog/house-for-potter/</link>
-      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
-      
-      <guid>https://nishinohi.github.io/blog/house-for-potter/</guid>
-      <description>Concept 便利さや機能性のための住居ではなく、陶芸家として生きるための住居の提案。</description>
-    </item>
-    
-    <item>
       <title>コンパクトな3G通信モジュールを作る</title>
       <link>https://nishinohi.github.io/blog/compact-3g-module/</link>
-      <pubDate>Wed, 16 May 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 25 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://nishinohi.github.io/blog/compact-3g-module/</guid>
       <description>何を作ったのか  GPS機能付きの3G通信モジュールです。HWの設計に関する知識を持ち合わせていないので0からHWを設計したわけではなく、OSHで提供されている多機能な3Gモジュールを改修してコンパクトなモジュールを再設計・製造したという話です。
@@ -120,6 +58,68 @@ OSH Adafruitに感謝しながら以下のリポジトリをクローンしま�
 不要な回路を削る 前編で触れましたが、3G通信以外の機能が不要であれば以下の回路は不要なので今回は削除します。
  電話機能用のスピーカー イヤホンジャック バッテリーは電池駆動を想定したのでリチウム電池用の充放電管理回路  また、FONA自体はArduinoでの利用を想定しているためSIM5320からの3.3V信号をレベルシフター（回路図の「LEVEL SHIFTING」の箇所の三角形の部品）で5V信号に変換しています。しかし、私はESP8266での利用を想定しており、3.3V信号がそのまま利用できるのでレベルシフターも不要です。よって、回路図の以下のものは不要になります。
  3.5MM HEADPHONE/MIC LEVEL SHIFTING LIPO CHARGER AUDIO FILTERING  それらを削除した後の回路図、配線図は以下のようになります。グッとシンプルかつ簡単になりましたね。アンテナのコネクタを小さくしたかったので、3G通信アンテナ用のコネクタをSMAからUFLに変更しましたがこれはどっちでもいいです（変換コネクタもあるので）。</description>
+    </item>
+    
+    <item>
+      <title>小さく暮らし大きく開く</title>
+      <link>https://nishinohi.github.io/blog/live-small-open-wide/</link>
+      <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nishinohi.github.io/blog/live-small-open-wide/</guid>
+      <description>Concept 開口部を居住者や内部空間の都合ではなく都市の風景を眺める歩行者のために設計する。居住者は連続的に変形するルーバーの形に合わせて都市の風景の一部として居住空間を演出する。
+南堀江というコンパクトシティにおいて歴史的経緯のあるビルディングのファサードを失わずに歩行者のためのファサードを形成するとき、新たな都市の風景が生まれるかもしれない。
+このルーバーは見る角度によって内部の見え方にグラデーションをかける装置になる。ルーバーは見る角度によって開口部となりなったり重なりあって壁面のようにも振舞う。
+ルーバーの長さの変化により、周囲に見せたい空間(Public)、見られたくない空間(Private)の調整が可能なり、周囲を歩く人に対しグラデーションのある風景を作り出す。</description>
+    </item>
+    
+    <item>
+      <title>Nakanoshima Islandization</title>
+      <link>https://nishinohi.github.io/blog/nakanoshima-islandization/</link>
+      <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nishinohi.github.io/blog/nakanoshima-islandization/</guid>
+      <description>Concept 大阪の中にありながら周囲を水で囲まれた中之島は水都大阪の要であり、水運を利用した様々な交易の中心であり文化の発祥地でもあった。だが、大規模な橋や幹線道路の整備、地下鉄の普及により中之島はその島としてのコンテクストを失いただの地続きの土地のように認識されている。
+この美術館は中之島を文化の発祥地として再度「島化」する計画である。周囲を水で囲まれたその土地にはかつて水運を担った船が発着を繰り返し、訪れる人々に島という特別な場としての中之島を再認識させるだろう。</description>
+    </item>
+    
+    <item>
+      <title>パン屋の改修</title>
+      <link>https://nishinohi.github.io/blog/sin-taro-pan/</link>
+      <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nishinohi.github.io/blog/sin-taro-pan/</guid>
+      <description>2013年（大学院2年）に阪急石橋駅にあるタローパンというパン屋の改修を設計施工（予算300万円）。地元の工務店の助けもあり新築ではないものの企画から設計、施工にも深く携わることができ、スケジュールもオーバーせず無事竣工しました。
+壁は友人の協力の元全て漆喰で仕上げています。什器やイートインスペースのテーブル、椅子は地元の溶接工の方と協力して全て手作りで作成しました。 下図は現況写真とリニューアルにあたって私が作成したポスターです。
+模型やCGでイメージを共有しながら、5つほど改修案を提案し施主に計画内容を決定してもらいました。 打ち合わせを通していく中で、施主は自分が思っている以上にこの改修を無事終えられるか不安に感じていることがわかりました。このとき改めて自分が今まで取り組んできた設計はあくまで課題でしかなく、施主に納得してもらうという重要なフェーズが未経験であることを実感しました。 何のリスクもなく進めていける課題と違い、実際に何かを作るには設計以外の様々な問題をこなす必要があることを改めて学ぶことができました。 改修後の様子  </description>
+    </item>
+    
+    <item>
+      <title>卒業設計</title>
+      <link>https://nishinohi.github.io/blog/graduation-work/</link>
+      <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nishinohi.github.io/blog/graduation-work/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>カイタイユウゴウ</title>
+      <link>https://nishinohi.github.io/blog/kaitaiyugou/</link>
+      <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nishinohi.github.io/blog/kaitaiyugou/</guid>
+      <description>Concept 家族が多ければ多いほど必要な部屋数は増し様々な空間の大きさもより増大する。しかしながら、家族構成の変化に伴い家に求められる大きさはいずれ縮小する。
+そのとき家は変化にどう対応できるだろうか。使われなくなった子供部屋、夫婦2人には少し大きいリビング、余った寝室。それらを外部に開放して家の内部面積を縮小し外部空間を拡大する。
+このとき家々はその素材や構造を複雑に絡ませながらゆるやかに広がり周囲と交わり複雑な境界を作っていくだろう。</description>
+    </item>
+    
+    <item>
+      <title>陶芸家のための住宅</title>
+      <link>https://nishinohi.github.io/blog/house-for-potter/</link>
+      <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://nishinohi.github.io/blog/house-for-potter/</guid>
+      <description>Concept 陶芸家として生きるための住居の提案。</description>
     </item>
     
   </channel>

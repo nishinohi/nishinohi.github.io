@@ -1,7 +1,7 @@
 +++
 title = "陶芸家のための住宅"
 tags = ['architecture']
-date = 2020-06-25
+date = 2020-05-01
 
 # For description meta tag
 description = "house"
@@ -15,7 +15,7 @@ banner = 'img/house/asset-1.jpg'
 
 # Concept
 
-便利さや機能性のための住居ではなく、陶芸家として生きるための住居の提案。
+陶芸家として生きるための住居の提案。
 
 ![](img/house/asset-1.jpg)
 ![](img/house/asset-2.jpg)

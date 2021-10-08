@@ -20,7 +20,7 @@ Trap hunting is a tough job  Hunting is often associated with hunting rifles, bu
     <item>
       <title>Creating a Compact Gateway</title>
       <link>https://nishinohi.github.io/en/blog/compact-gateway/</link>
-      <pubDate>Thu, 25 Jun 2020 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
       
       <guid>https://nishinohi.github.io/en/blog/compact-gateway/</guid>
       <description>What I made  Using the 3G module created previously  as a reference, I have created a compact Gateway that combines a microcontroller and an LTE module.
@@ -30,7 +30,7 @@ OSH  Products for reference First, get a schematic from OSH. In this case, I wil
     <item>
       <title>Creating a compact 3G module</title>
       <link>https://nishinohi.github.io/en/blog/compact-3g-module/</link>
-      <pubDate>Wed, 16 May 2018 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 25 Oct 2020 00:00:00 +0000</pubDate>
       
       <guid>https://nishinohi.github.io/en/blog/compact-3g-module/</guid>
       <description>What I made  This is a 3G communication module with GPS function, and since I don&amp;rsquo;t have any knowledge about HW design, I didn&amp;rsquo;t design HW from scratch, but rather redesigned and manufactured a compact module by modifying a multifunctional 3G module provided by OSH.

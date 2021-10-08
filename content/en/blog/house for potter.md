@@ -1,7 +1,7 @@
 +++
 title = "House for potter"
 tags = ['architecture']
-date = 2020-06-25
+date = 2020-05-01
 
 # For description meta tag
 description = "house"
@@ -15,7 +15,7 @@ banner = 'img/house/asset-1.jpg'
 
 # Concept
 
-It is not a residence for convenience or functionality, but a residence for living as a potter.
+A proposal for a residence for living as a potter.
 
 ![](img/house/asset-1.jpg)
 ![](img/house/asset-2.jpg)

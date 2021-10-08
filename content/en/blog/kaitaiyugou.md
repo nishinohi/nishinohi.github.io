@@ -1,7 +1,7 @@
 +++
 title = "Disassembly Fusion"
 tags = ['architecture']
-date = 2020-06-25
+date = 2020-06-01
 
 # For description meta tag
 description = "Competition"

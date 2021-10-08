@@ -67,21 +67,8 @@
                 href="https://nishinohi.github.io/en/tags/"
                 />
   </url><url>
-    <loc>https://nishinohi.github.io/en/tags/architecture/</loc>
-    <lastmod>2020-06-25T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://nishinohi.github.io/tags/architecture/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://nishinohi.github.io/en/tags/architecture/"
-                />
-  </url><url>
     <loc>https://nishinohi.github.io/en/blog/compact-gateway/</loc>
-    <lastmod>2020-06-25T00:00:00+00:00</lastmod>
+    <lastmod>2021-01-25T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
@@ -93,47 +80,8 @@
                 href="https://nishinohi.github.io/en/blog/compact-gateway/"
                 />
   </url><url>
-    <loc>https://nishinohi.github.io/en/blog/kaitaiyugou/</loc>
-    <lastmod>2020-06-25T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://nishinohi.github.io/blog/kaitaiyugou/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://nishinohi.github.io/en/blog/kaitaiyugou/"
-                />
-  </url><url>
-    <loc>https://nishinohi.github.io/en/blog/graduation-work/</loc>
-    <lastmod>2020-06-25T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://nishinohi.github.io/blog/graduation-work/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://nishinohi.github.io/en/blog/graduation-work/"
-                />
-  </url><url>
-    <loc>https://nishinohi.github.io/en/blog/house-for-potter/</loc>
-    <lastmod>2020-06-25T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://nishinohi.github.io/blog/house-for-potter/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://nishinohi.github.io/en/blog/house-for-potter/"
-                />
-  </url><url>
     <loc>https://nishinohi.github.io/en/tags/hw/</loc>
-    <lastmod>2020-06-25T00:00:00+00:00</lastmod>
+    <lastmod>2021-01-25T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
@@ -145,8 +93,34 @@
                 href="https://nishinohi.github.io/en/tags/hw/"
                 />
   </url><url>
+    <loc>https://nishinohi.github.io/en/blog/compact-3g-module/</loc>
+    <lastmod>2020-10-25T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://nishinohi.github.io/blog/compact-3g-module/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://nishinohi.github.io/en/blog/compact-3g-module/"
+                />
+  </url><url>
+    <loc>https://nishinohi.github.io/en/tags/architecture/</loc>
+    <lastmod>2020-10-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://nishinohi.github.io/tags/architecture/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://nishinohi.github.io/en/tags/architecture/"
+                />
+  </url><url>
     <loc>https://nishinohi.github.io/en/blog/live-small-open-wide/</loc>
-    <lastmod>2020-06-25T00:00:00+00:00</lastmod>
+    <lastmod>2020-10-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
@@ -159,7 +133,7 @@
                 />
   </url><url>
     <loc>https://nishinohi.github.io/en/blog/nakanoshima-islandization/</loc>
-    <lastmod>2020-06-25T00:00:00+00:00</lastmod>
+    <lastmod>2020-09-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
@@ -172,7 +146,7 @@
                 />
   </url><url>
     <loc>https://nishinohi.github.io/en/blog/sin-taro-pan/</loc>
-    <lastmod>2020-06-25T00:00:00+00:00</lastmod>
+    <lastmod>2020-08-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
@@ -184,17 +158,43 @@
                 href="https://nishinohi.github.io/en/blog/sin-taro-pan/"
                 />
   </url><url>
-    <loc>https://nishinohi.github.io/en/blog/compact-3g-module/</loc>
-    <lastmod>2018-05-16T00:00:00+00:00</lastmod>
+    <loc>https://nishinohi.github.io/en/blog/graduation-work/</loc>
+    <lastmod>2020-07-01T00:00:00+00:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://nishinohi.github.io/blog/compact-3g-module/"
+                href="https://nishinohi.github.io/blog/graduation-work/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://nishinohi.github.io/en/blog/compact-3g-module/"
+                href="https://nishinohi.github.io/en/blog/graduation-work/"
+                />
+  </url><url>
+    <loc>https://nishinohi.github.io/en/blog/kaitaiyugou/</loc>
+    <lastmod>2020-06-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://nishinohi.github.io/blog/kaitaiyugou/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://nishinohi.github.io/en/blog/kaitaiyugou/"
+                />
+  </url><url>
+    <loc>https://nishinohi.github.io/en/blog/house-for-potter/</loc>
+    <lastmod>2020-05-01T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://nishinohi.github.io/blog/house-for-potter/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://nishinohi.github.io/en/blog/house-for-potter/"
                 />
   </url><url>
     <loc>https://nishinohi.github.io/en/about/</loc>
