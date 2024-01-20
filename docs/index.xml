@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0"
+  xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>nishinohi</title>
     <link>https://nishinohi.github.io/</link>
     <description>Recent content on nishinohi</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 25 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://nishinohi.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Jun 2021 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://nishinohi.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>MATAGEEK</title>
       <link>https://nishinohi.github.io/blog/matageek/</link>
       <pubDate>Fri, 25 Jun 2021 00:00:00 +0000</pubDate>
-      
+
       <guid>https://nishinohi.github.io/blog/matageek/</guid>
       <description>MATAGEEKって何？  一言でいうとBLEメッシュネットワークを利用した狩猟用わなの検知及び通知システムです。
 わな猟って大変ですよね  狩猟といえば猟銃のイメージがありますが、わな猟も重要な方法の一つです。しかし仕掛けたわなは原則毎日見回りを実施する必要があります。1（非狩猟鳥獣がかからないように、手負いの動物をつくらないように等）また獲物がかかった場合もできる限り早急に対処できた方が理想的です。 ということでイメージとしては以下のようなものが出来上がれば色々便利そうです。 わなが作動したときに通知を送信するようなものであれば SORACOM LTE-M Button などの市販のIoTモジュールで割と事足ります。ですがわな猟は捕獲率を上げるために動物の通りそうな箇所にわなを複数個仕掛けるのが一般的で、それぞれのわなにIoTモジュールを配置するのは費用的に個人で可能なレベルとは少し言いにくいです。（ピンきりですがLTE回線等が使用できるモジュールは安くても1万円はするので）
@@ -26,12 +28,12 @@ FruityMesh  FruityMesh というBluetooth 4のBLEのみでメッシュネット�
 後述するSORACOM BEAMによる暗号化を利用するための証明書や秘密鍵の発行はAWS IoTを利用しています。これでSIM毎に個別の暗号化ができるのでもしこの仕組みを利用したい方がいればそれぞれでセキュリティを担保できます。
 暗号化  簡単では無いですが避けては通れないのが暗号化です。今回は2種類の通信でそれぞれに暗号化が必要です。</description>
     </item>
-    
+
     <item>
       <title>コンパクトなGatewayを作る</title>
       <link>https://nishinohi.github.io/blog/compact-gateway/</link>
       <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
-      
+
       <guid>https://nishinohi.github.io/blog/compact-gateway/</guid>
       <description>何を作ったのか  以前に作成した3G通信モジュールを参考に、マイコンとLTEモジュールを組合わせたコンパクトなGatewayを作成しました。
 OSH  参考にする製品 まずはOSHから回路図をもらってきます。今回はSORACOM認定デバイスでもありSeeedから提供されている Wio LTEの回路図 を参考にします。Wio LTEで実装されているLTE用のEC21の仕様書の参考回路図などから自分で回路を組んでもいいのですが、最終的にPCBAをSeeedに発注する場合Seeedが提供している部品リストを利用したほうが安価で納品も速いです。なお、後述しますが最終的に今回は技適対応済みのEC25-Jを実装することになりました。
@@ -41,12 +43,12 @@ OSH  参考にする製品 まずはOSHから回路図をもらってきます�
 トラブル どうもSeeedが提供していたSIMカードホルダーのEagle用のライブラリに不備があったようでそのまま配線するとSIMを正しく読み取れませんでした。なので一度SIMカードホルダーを半田を溶かして無理やり引き剥がし配線をやり直しました。見た目が残念なことになりましたがこれで正しく動作したので一安心です。ちなみにSeeed側からは謝罪を兼ねてSeeed内で使用できるクーポン券が送られてきました。
 EC25-Jは特別な入手経路  実は今回LTE用のモジュールとして実装しているEC25-Jですが、本来技適マークが印字されているものは個人では注文できません。Seeed主催の勉強会で登壇した際に知り合ったSeeedのエンジニア兼マーケティング担当の方に相談したところ、EC25-Jなら実装できるように手配すると言われ今回このモジュールが完成しました。本当にありがとうございました、この場を借りてお礼申し上げます。</description>
     </item>
-    
+
     <item>
       <title>コンパクトな3G通信モジュールを作る</title>
       <link>https://nishinohi.github.io/blog/compact-3g-module/</link>
       <pubDate>Sun, 25 Oct 2020 00:00:00 +0000</pubDate>
-      
+
       <guid>https://nishinohi.github.io/blog/compact-3g-module/</guid>
       <description>何を作ったのか  GPS機能付きの3G通信モジュールです。HWの設計に関する知識を持ち合わせていないので0からHWを設計したわけではなく、OSHで提供されている多機能な3Gモジュールを改修してコンパクトなモジュールを再設計・製造したという話です。
 なぜ作ったのか  これを作った当時（2016年くらい）、携帯電波網を利用できる比較的安いArduino向けのモジュールがありませんでした。当時はマイコンによる3G通信で安価なホビー向けの環境はRaspberry Pi ZERO + 3Gドングル + SORACOM SIMの選択肢が一般的でした。そんな中「USBドングルでかい、Raspberry Pi ZERO意外とでかい、電源リソース苦しい、Arduino使いたい」という私の我儘を叶えられるモジュールはないかと奔走しましたが、そんな願ったり叶ったりなモノは見つからなかったため自作することにしました。
@@ -59,86 +61,86 @@ OSH Adafruitに感謝しながら以下のリポジトリをクローンしま�
  電話機能用のスピーカー イヤホンジャック バッテリーは電池駆動を想定したのでリチウム電池用の充放電管理回路  また、FONA自体はArduinoでの利用を想定しているためSIM5320からの3.3V信号をレベルシフター（回路図の「LEVEL SHIFTING」の箇所の三角形の部品）で5V信号に変換しています。しかし、私はESP8266での利用を想定しており、3.3V信号がそのまま利用できるのでレベルシフターも不要です。よって、回路図の以下のものは不要になります。
  3.5MM HEADPHONE/MIC LEVEL SHIFTING LIPO CHARGER AUDIO FILTERING  それらを削除した後の回路図、配線図は以下のようになります。グッとシンプルかつ簡単になりましたね。アンテナのコネクタを小さくしたかったので、3G通信アンテナ用のコネクタをSMAからUFLに変更しましたがこれはどっちでもいいです（変換コネクタもあるので）。</description>
     </item>
-    
+
     <item>
       <title>小さく暮らし大きく開く</title>
       <link>https://nishinohi.github.io/blog/live-small-open-wide/</link>
       <pubDate>Thu, 01 Oct 2020 00:00:00 +0000</pubDate>
-      
+
       <guid>https://nishinohi.github.io/blog/live-small-open-wide/</guid>
       <description>Concept 開口部を居住者や内部空間の都合ではなく都市の風景を眺める歩行者のために設計する。居住者は連続的に変形するルーバーの形に合わせて都市の風景の一部として居住空間を演出する。
 南堀江というコンパクトシティにおいて歴史的経緯のあるビルディングのファサードを失わずに歩行者のためのファサードを形成するとき、新たな都市の風景が生まれるかもしれない。
 このルーバーは見る角度によって内部の見え方にグラデーションをかける装置になる。ルーバーは見る角度によって開口部となりなったり重なりあって壁面のようにも振舞う。
 ルーバーの長さの変化により、周囲に見せたい空間(Public)、見られたくない空間(Private)の調整が可能なり、周囲を歩く人に対しグラデーションのある風景を作り出す。</description>
     </item>
-    
+
     <item>
       <title>Nakanoshima Islandization</title>
       <link>https://nishinohi.github.io/blog/nakanoshima-islandization/</link>
       <pubDate>Tue, 01 Sep 2020 00:00:00 +0000</pubDate>
-      
+
       <guid>https://nishinohi.github.io/blog/nakanoshima-islandization/</guid>
       <description>Concept 大阪の中にありながら周囲を水で囲まれた中之島は水都大阪の要であり、水運を利用した様々な交易の中心であり文化の発祥地でもあった。だが、大規模な橋や幹線道路の整備、地下鉄の普及により中之島はその島としてのコンテクストを失いただの地続きの土地のように認識されている。
 この美術館は中之島を文化の発祥地として再度「島化」する計画である。周囲を水で囲まれたその土地にはかつて水運を担った船が発着を繰り返し、訪れる人々に島という特別な場としての中之島を再認識させるだろう。</description>
     </item>
-    
+
     <item>
       <title>パン屋の改修</title>
       <link>https://nishinohi.github.io/blog/sin-taro-pan/</link>
       <pubDate>Sat, 01 Aug 2020 00:00:00 +0000</pubDate>
-      
+
       <guid>https://nishinohi.github.io/blog/sin-taro-pan/</guid>
       <description>2013年（大学院2年）に阪急石橋駅にあるタローパンというパン屋の改修を設計施工（予算300万円）。地元の工務店の助けもあり新築ではないものの企画から設計、施工にも深く携わることができ、スケジュールもオーバーせず無事竣工しました。
 壁は友人の協力の元全て漆喰で仕上げています。什器やイートインスペースのテーブル、椅子は地元の溶接工の方と協力して全て手作りで作成しました。 下図は現況写真とリニューアルにあたって私が作成したポスターです。
 模型やCGでイメージを共有しながら、5つほど改修案を提案し施主に計画内容を決定してもらいました。 打ち合わせを通していく中で、施主は自分が思っている以上にこの改修を無事終えられるか不安に感じていることがわかりました。このとき改めて自分が今まで取り組んできた設計はあくまで課題でしかなく、施主に納得してもらうという重要なフェーズが未経験であることを実感しました。 何のリスクもなく進めていける課題と違い、実際に何かを作るには設計以外の様々な問題をこなす必要があることを改めて学ぶことができました。 改修後の様子  </description>
     </item>
-    
+
     <item>
       <title>卒業設計</title>
       <link>https://nishinohi.github.io/blog/graduation-work/</link>
       <pubDate>Wed, 01 Jul 2020 00:00:00 +0000</pubDate>
-      
+
       <guid>https://nishinohi.github.io/blog/graduation-work/</guid>
       <description></description>
     </item>
-    
+
     <item>
       <title>カイタイユウゴウ</title>
       <link>https://nishinohi.github.io/blog/kaitaiyugou/</link>
       <pubDate>Mon, 01 Jun 2020 00:00:00 +0000</pubDate>
-      
+
       <guid>https://nishinohi.github.io/blog/kaitaiyugou/</guid>
       <description>Concept 家族が多ければ多いほど必要な部屋数は増し様々な空間の大きさもより増大する。しかしながら、家族構成の変化に伴い家に求められる大きさはいずれ縮小する。
 そのとき家は変化にどう対応できるだろうか。使われなくなった子供部屋、夫婦2人には少し大きいリビング、余った寝室。それらを外部に開放して家の内部面積を縮小し外部空間を拡大する。
 このとき家々はその素材や構造を複雑に絡ませながらゆるやかに広がり周囲と交わり複雑な境界を作っていくだろう。</description>
     </item>
-    
+
     <item>
       <title>陶芸家のための住宅</title>
       <link>https://nishinohi.github.io/blog/house-for-potter/</link>
       <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
-      
+
       <guid>https://nishinohi.github.io/blog/house-for-potter/</guid>
       <description>Concept 陶芸家として生きるための住居の提案。</description>
     </item>
-    
+
     <item>
       <title>about me</title>
       <link>https://nishinohi.github.io/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>https://nishinohi.github.io/about/</guid>
-      <description>学歴   大阪大学工学部地球総合工学科卒業（2012卒） 大阪大学大学院工学研究科地球総合工学専攻修了（2014卒） 研究室：建築・都市人間工学領域  学生時代の活動  受賞歴   Diploma×KYOTO’12  -&amp;gt; 最優秀賞   関連書籍     卒業設計日本一決定戦2012  -&amp;gt; 予選通過    関連書籍     日本建築学会設計競技2012  -&amp;gt; 近畿支部入選   ユニオン造形デザイン賞2013 （審査員： 藤本壮介 ） -&amp;gt; 佳作   企画・設計・施工   タローパン改修（2014）   設計課題   アーカイブ   職歴    職務経歴書   業務外活動  Contributor   FruityMesh   メッシュノードのスマートフォンとの接続機能とアプリケーションUART（無線UART）機能    個人開発   FruityMeshAppUart   メッシュノードへの無線ターミナル接続スマートフォンアプリ    MATAGEEK   狩猟用わな検知システム（IoT）    技術記事   Qiita   勉強会（登壇）    大阪版IoT縛りの勉強会！IoTLT Osaka Vol.</description>
+      <description>学歴   大阪大学工学部卒 大阪大学大学院修了 学生時代の活動  受賞歴   Diploma×KYOTO’12  -&amp;gt; 最優秀賞   関連書籍     卒業設計日本一決定戦2012  -&amp;gt; 予選通過    関連書籍     日本建築学会設計競技2012  -&amp;gt; 近畿支部入選   ユニオン造形デザイン賞2013 （審査員： 藤本壮介 ） -&amp;gt; 佳作   企画・設計・施工   タローパン改修（2014）   設計課題   アーカイブ   職歴    職務経歴書   業務外活動  Contributor   FruityMesh   メッシュノードのスマートフォンとの接続機能とアプリケーションUART（無線UART）機能    個人開発   FruityMeshAppUart   メッシュノードへの無線ターミナル接続スマートフォンアプリ    MATAGEEK   狩猟用わな検知システム（IoT）    技術記事   Qiita   勉強会（登壇）    大阪版IoT縛りの勉強会！IoTLT Osaka Vol.</description>
     </item>
-    
+
     <item>
       <title>職務経歴書</title>
       <link>https://nishinohi.github.io/resume/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+
       <guid>https://nishinohi.github.io/resume/</guid>
       <description>職務経歴概要  Webシステム  設計・要件定義：2年 プログラミング（フロントエンド）：3年 プログラミング（バックエンド）：1年 プロジェクトリーダー：1年  距離画像カメラを使った3Dセンシングシステム  テスター：6ヶ月 プログラミング：1年  その他開発経験  ArchiCAD GDLオブジェクトの作成：3ヶ月  プログラミングスキル  C, C++  後述の3Dセンシングの開発で1年、業務外での個人開発（マイコン関連）で1年ほど 一般的な業務の読み書きができ、クラスベースの実装や複雑でないテンプレートなども実装できる  Java  Web開発のバックエンドでJava8を1年ほど 一般的な業務の読み書きは問題なくでき、ジェネリクスや複雑でないリフレクションなども実装できる  JavaScript, TypeScript  Web開発のフロントエンドでJavaScriptは1年、TypeScriptは3年ほど JavaScriptは一般的な業務の読み書きが可能でモジュールシステム（ES Modules）を理解している TypeScriptは一般的な業務の読み書きに加えジェネリクスやある程度複雑な型定義も可能 Three.jsを利用した業務用3Dプログラミングを3年経験  その他のスキル  Adobe Illustrator  応用的な操作が可能で広告、提案書等に用いるものを作成可能  Adobe Photoshop  基本的な操作が可能で簡単な広告、提案書等に用いるものを作成可能  Sketch UP  応用的な操作が可能でプラグインの導入などにも知識があり活用できる  Blender  基本的な操作が可能で複雑でないモデリング、簡単なUV展開、テクスチャ作成が可能  資格    普通自動車第一種運転免許：2009/5 応用情報技術者試験合格：2016/12  職務経歴  応用技術株式会社 （2016/5〜2021/9） ArchiCADのGDLオブジェクトの作成（2016/6〜2016/7）  メンバー：1人 GDLで一定の入力に対してパラメトリックに変形、制御可能なオブジェクト（トイレ、ガレージ用門扉）を作成 MEP Modeler用の接続ポイントを埋め込んだ3Dモデルの作成  保守業務管理支援システム（2016/8〜2017/1）  メンバー：6人 自社製品である保守業務管理支援システムの特定企業向けカスタマイズのフロントエンド、バックエンドの開発を担当しました。   検索画面のUI作成、検索機能、検索結果等のcsv変換機能 Java EE / Java8 / jQuery / PostgreSQL  3Dウッドデッキ総合積算システム（2017/2〜2018/2） 3Dでのウッドデッキの設計、図面生成、積算システムのフロントエンド開発を担当しました。また、要件定義と設計の一部を担当しました。</description>
     </item>
-    
+
   </channel>
 </rss>
