@@ -15,19 +15,6 @@
                 href="https://nishinohi.github.io/en/blog/"
                 />
   </url><url>
-    <loc>https://nishinohi.github.io/en/blog/matageek/</loc>
-    <lastmod>2021-06-25T00:00:00+00:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://nishinohi.github.io/blog/matageek/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://nishinohi.github.io/en/blog/matageek/"
-                />
-  </url><url>
     <loc>https://nishinohi.github.io/en/tags/matageek/</loc>
     <lastmod>2021-06-25T00:00:00+00:00</lastmod>
     <xhtml:link
@@ -39,6 +26,19 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://nishinohi.github.io/en/tags/matageek/"
+                />
+  </url><url>
+    <loc>https://nishinohi.github.io/en/blog/matageek/</loc>
+    <lastmod>2021-06-25T00:00:00+00:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://nishinohi.github.io/blog/matageek/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://nishinohi.github.io/en/blog/matageek/"
                 />
   </url><url>
     <loc>https://nishinohi.github.io/en/</loc>

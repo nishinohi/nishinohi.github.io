@@ -1,3 +1,5 @@
 /node_modules
 **/public/
 **/themes/*
+# Generated files by hugo
+/resources/_gen/
